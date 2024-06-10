@@ -2,12 +2,12 @@ site_name: "Módulo Backend"
 site_description: "Documentação completa para o Módulo Backend"
 site_author: "Nome do Autor"
 site_url: "https://seusite.com"
-repo_url: "https://github.com/seurepositorio"
+repo_url: "https://github.com/afonsolelis/backend"
 repo_name: "GitHub"
 
 nav:
   - Introdução:
-      - "Visão Geral": index.md
+      - "Sistemas Web": index.md
   - Configuração do Ambiente:
       - "Sistemas Operacionais e Dockerização": docker.md
   - Modelagem de Dados:
