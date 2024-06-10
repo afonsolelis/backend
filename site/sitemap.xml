@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://seusite.com/sails/</loc>
+         <lastmod>2024-06-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://seusite.com/sqlav/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
