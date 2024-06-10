@@ -1,0 +1,43 @@
+site_name: "Módulo Backend"
+site_description: "Documentação completa para o Módulo Backend"
+site_author: "Nome do Autor"
+site_url: "https://seusite.com"
+repo_url: "https://github.com/seurepositorio"
+repo_name: "GitHub"
+
+nav:
+  - Introdução:
+      - "Visão Geral": index.md
+  - Configuração do Ambiente:
+      - "Sistemas Operacionais e Dockerização": docker.md
+  - Modelagem de Dados:
+      - "Modelando Banco de Dados": bd.md
+      - "CRUD em Bancos de Dados": crudbd.md
+      - "SQL Avançado": sqlav.md
+  - Desenvolvimento:
+      - "Sails JS": sails.md
+      - "Node, Models e Controllers": mcontro.md
+      - "Endpoints de Leitura e Escrita": endpoints.md
+  - Qualidade e Automação:
+      - "Testes e Automação": testes.md
+  - Deploy:
+      - "Deploy em Servidor": deploy.md
+
+theme:
+  name: "material"
+  language: "pt"
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.instant
+    - toc.integrate
+    - header.autohide
+  palette:
+    primary: "indigo"
+    accent: "indigo"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+
+plugins:
+  - search
