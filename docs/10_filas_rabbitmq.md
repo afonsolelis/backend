@@ -1,0 +1,1 @@
+# Filas com RabbitMQ e Controle Assíncrono de Requisições
