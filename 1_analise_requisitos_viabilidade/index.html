@@ -1,0 +1,1216 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação completa para o Módulo Backend">
+      
+      
+        <meta name="author" content="Nome do Autor">
+      
+      
+        <link rel="canonical" href="https://seusite.com/1_analise_requisitos_viabilidade/">
+      
+      
+      
+        <link rel="next" href="../2_gitflow_conventional_commits/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Análise de Requisitos e Viabilidade - Módulo Backend</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analise-de-requisitos-e-viabilidade-uma-aula-avancada-com-desafio-pratico" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Módulo Backend" class="md-header__button md-logo" aria-label="Módulo Backend" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Módulo Backend
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Análise de Requisitos e Viabilidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/afonsolelis/backend" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Módulo Backend" class="md-nav__button md-logo" aria-label="Módulo Backend" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Módulo Backend
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/afonsolelis/backend" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Análise de Requisitos e Viabilidade
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Análise de Requisitos e Viabilidade
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-do-sailsjs-criacao-do-projeto-e-organizacao-da-documentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação do Sails.js, Criação do Projeto e Organização da Documentação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalação do Sails.js, Criação do Projeto e Organização da Documentação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo a Passo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizacao-da-documentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organização da Documentação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacao-do-sailsjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentação do Sails.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-de-aprendizagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos de Aprendizagem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteudo-da-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo da Aula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao-a-analise-de-requisitos-em-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução à Análise de Requisitos em Backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introdução à Análise de Requisitos em Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicao-e-importancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição e Importância
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Requisitos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Não Funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regras de Negócio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnicas-de-elicitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de Elicitação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacao-de-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentação de Requisitos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-analise-de-viabilidade-em-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Análise de Viabilidade em Backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Análise de Viabilidade em Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viabilidade-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viabilidade Técnica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viabilidade-de-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viabilidade de Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ferramentas-e-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ferramentas e Métodos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-priorizacao-de-requisitos-em-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Priorização de Requisitos em Backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Priorização de Requisitos em Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importancia-da-priorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importância da Priorização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-priorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critérios de Priorização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnicas-de-priorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de Priorização
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ferramentas-e-modelos-para-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ferramentas e Modelos para Backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ferramentas e Modelos para Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ferramentas-para-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ferramentas para Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-para-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelos para Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desafio-final-analise-de-requisitos-para-um-modulo-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desafio Final: Análise de Requisitos para um Módulo Backend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_gitflow_conventional_commits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitFlow e Conventional Commits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_virtualizacao_node_docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtualização, Node e Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_modelagem_bd_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelagem de Banco de Dados e Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_rotas_controllers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rotas e Controllers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_atividade_avaliativa_individual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atividade Avaliativa Individual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7_queries_sql_avancadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Queries SQLs Avançadas em Banco de Dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8_helpers_camadas_auxiliares_mvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpers e Camadas Auxiliares do MVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9_avaliacao_multidisciplinar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliação Multidisciplinar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_filas_rabbitmq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filas com RabbitMQ e Controle Assíncrono de Requisições
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_tdd_testes_unitarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TDD e Testes Unitários
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_deploy_render/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy com Render (Web Service + PostgreSQL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_autenticacao_criptografia_usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autenticação com Criptografia de Usuários
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_revisao_direcionamento_projetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revisão e Direcionamento de Projetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_avaliacao_semestral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliação Semestral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="analise-de-requisitos-e-viabilidade-uma-aula-avancada-com-desafio-pratico">Análise de Requisitos e Viabilidade: Uma Aula Avançada com Desafio Prático</h1>
+<h2 id="instalacao-do-sailsjs-criacao-do-projeto-e-organizacao-da-documentacao">Instalação do Sails.js, Criação do Projeto e Organização da Documentação</h2>
+<p>Vamos iniciar o processo desde a instalação do framework Sails.js até a criação da estrutura do projeto e a organização da documentação da Análise de Requisitos.</p>
+<p><img alt="" src="https://sailsjs.com/images/get_started_hero@2x.png" /></p>
+<h3 id="passo-a-passo">Passo a Passo</h3>
+<ol>
+<li><strong>Instalar o Sails.js:</strong></li>
+<li>Certifique-se de ter o Node.js e o npm (gerenciador de pacotes do Node.js) instalados em sua máquina.</li>
+<li>Abra o terminal ou prompt de comando.</li>
+<li>
+<p>Execute o comando <code>npm install sails -g</code> para instalar o Sails.js globalmente.</p>
+</li>
+<li>
+<p><strong>Criar o Projeto Sails:</strong></p>
+</li>
+<li>Navegue até o diretório onde deseja criar o projeto.</li>
+<li>Execute o comando <code>sails new nome-do-projeto</code>.</li>
+<li>
+<p>Escolha a opção "Empty App" quando solicitado.</p>
+</li>
+<li>
+<p><strong>Criar a Pasta de Documentação:</strong></p>
+</li>
+<li>
+<p>Dentro do diretório do projeto Sails (<code>nome-do-projeto</code>), crie uma pasta chamada <code>docs</code>.</p>
+</li>
+<li>
+<p><strong>Iniciar o Projeto (Opcional):</strong></p>
+</li>
+<li>Para verificar se o projeto foi criado corretamente, navegue até o diretório do projeto e execute <code>sails lift</code>.</li>
+<li>
+<p>O Sails iniciará um servidor local e você poderá acessar a aplicação em <code>http://localhost:1337</code>.</p>
+</li>
+<li>
+<p><strong>Adicionar e Commitar Arquivos:</strong></p>
+</li>
+<li>Crie o arquivo <code>README.md</code> dentro da pasta <code>docs</code>.</li>
+<li>Utilize o Markdown para documentar a Análise de Requisitos, seguindo as instruções do Desafio Final.</li>
+<li>Salve o arquivo.</li>
+<li>No terminal, navegue até o diretório do projeto Sails.</li>
+<li>
+<p>Execute os comandos:</p>
+<ul>
+<li><code>git init</code> (para inicializar um repositório Git)</li>
+<li><code>git add docs/README.md</code> (para adicionar o arquivo ao stage)</li>
+<li><code>git commit -m "Adicionando documentação da Análise de Requisitos"</code> (para criar um commit com uma mensagem descritiva)</li>
+</ul>
+</li>
+<li>
+<p><strong>Criar o Repositório no GitHub:</strong></p>
+</li>
+<li>Se desejar compartilhar seu projeto e a documentação, siga os passos:<ul>
+<li>Crie um novo repositório no GitHub.</li>
+<li>No terminal, dentro do diretório do projeto, execute:<ul>
+<li><code>git remote add origin &lt;URL do repositório&gt;</code> (para conectar o repositório local ao remoto)</li>
+<li><code>git push -u origin main</code> (para enviar as alterações para o repositório remoto)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="organizacao-da-documentacao">Organização da Documentação</h3>
+<p>Mantenha a pasta <code>docs</code> organizada, adicionando subpastas ou arquivos adicionais para cada tipo de requisito ou documento do projeto. Utilize a estrutura sugerida anteriormente.</p>
+<h3 id="documentacao-do-sailsjs">Documentação do Sails.js</h3>
+<p>Para mais informações sobre o Sails.js e suas funcionalidades, consulte a documentação oficial:</p>
+<ul>
+<li><strong>Sails.js Documentation:</strong> <a href="https://sailsjs.com/documentation">https://sailsjs.com/documentation</a></li>
+</ul>
+<h3 id="observacoes">Observações</h3>
+<ul>
+<li>Certifique-se de ter o Node.js e o npm instalados antes de começar.</li>
+<li>A pasta <code>docs</code> é uma convenção para armazenar documentação em projetos de software.</li>
+<li>A criação de um repositório no GitHub é opcional, mas recomendada para facilitar o compartilhamento e a colaboração.</li>
+</ul>
+<p>Com este guia completo, você estará pronto para iniciar seu projeto Sails, documentar a Análise de Requisitos e compartilhar seu trabalho no GitHub.</p>
+<h3 id="introducao">Introdução</h3>
+<p>A Análise de Requisitos e Viabilidade é essencial para o desenvolvimento de qualquer software, incluindo interfaces de usuário (frontend). Ela garante que o produto final atenda às necessidades dos usuários e seja viável dentro das restrições do projeto. Nesta aula, exploraremos os conceitos e técnicas da Análise de Requisitos e Viabilidade aplicados ao desenvolvimento frontend, culminando em um desafio prático para consolidar seu aprendizado.</p>
+<p><img alt="" src="https://profandreagarcia.wordpress.com/wp-content/uploads/2018/03/requisitos.jpg" /></p>
+<h3 id="objetivos-de-aprendizagem">Objetivos de Aprendizagem</h3>
+<p>Ao final desta aula, você será capaz de:</p>
+<ul>
+<li>Compreender a importância da Análise de Requisitos e Viabilidade no desenvolvimento frontend.</li>
+<li>Identificar e documentar requisitos funcionais, não funcionais e de usabilidade.</li>
+<li>Realizar análises de viabilidade técnica e de design para interfaces de usuário.</li>
+<li>Aplicar técnicas de elicitação e priorização de requisitos em projetos frontend.</li>
+<li>Utilizar ferramentas e modelos para auxiliar na Análise de Requisitos e Viabilidade em frontend.</li>
+</ul>
+<p><img alt="" src="https://analisederequisitos.com.br/wp-content/uploads/2018/03/Estrutura-dos-requisitos-de-nego%CC%81cio-usua%CC%81rio-e-requisitos-de-sistema.png" /></p>
+<h3 id="conteudo-da-aula">Conteúdo da Aula</h3>
+<h2 id="1-introducao-a-analise-de-requisitos-em-backend">1. Introdução à Análise de Requisitos em Backend</h2>
+<p>A Análise de Requisitos em Backend é o alicerce para o desenvolvimento de sistemas robustos e eficientes. Ela envolve a identificação, documentação e validação das necessidades e expectativas dos usuários e stakeholders em relação à lógica, aos dados e às funcionalidades internas do sistema.</p>
+<h3 id="definicao-e-importancia">Definição e Importância</h3>
+<p>A Análise de Requisitos em Backend é um processo fundamental que visa entender e definir as regras de negócio, os fluxos de dados e as operações que o sistema deve realizar em segundo plano. Ela serve como um guia para o desenvolvimento do backend, garantindo que o sistema:</p>
+<ul>
+<li><strong>Funcional:</strong> Execute as operações necessárias para atender às necessidades dos usuários e do negócio.</li>
+<li><strong>Confiável:</strong> Processe e armazene dados de forma segura e consistente.</li>
+<li><strong>Escalável:</strong> Suporte o crescimento do número de usuários e da quantidade de dados sem comprometer o desempenho.</li>
+<li><strong>Manutenível:</strong> Seja fácil de atualizar e modificar para atender a novas demandas.</li>
+<li><strong>Integrável:</strong> Comunique-se de forma eficiente com outros sistemas e componentes.</li>
+</ul>
+<h3 id="tipos-de-requisitos">Tipos de Requisitos</h3>
+<p>Os requisitos em backend podem ser classificados em três categorias principais:</p>
+<h4 id="requisitos-funcionais">Requisitos Funcionais</h4>
+<p>Descrevem as funcionalidades internas que o sistema deve oferecer para suportar as interações do usuário e as regras de negócio. São ações que o sistema deve realizar em segundo plano, como:</p>
+<ul>
+<li><strong>Processamento de dados:</strong> Calcular valores, validar informações, transformar dados.</li>
+<li><strong>Gerenciamento de dados:</strong> Armazenar, recuperar, atualizar e excluir dados em bancos de dados.</li>
+<li><strong>Comunicação:</strong> Trocar informações com outros sistemas ou componentes através de APIs.</li>
+<li><strong>Autenticação e autorização:</strong> Controlar o acesso aos recursos do sistema.</li>
+<li><strong>Lógica de negócio:</strong> Implementar as regras e políticas que regem o funcionamento do sistema.</li>
+</ul>
+<p>Exemplos de requisitos funcionais:</p>
+<ul>
+<li>"O sistema deve calcular o valor total de um pedido com base nos produtos e quantidades."</li>
+<li>"O sistema deve validar o formato de um endereço de e-mail antes de permitir o cadastro."</li>
+<li>"O sistema deve gerar um relatório mensal de vendas."</li>
+</ul>
+<h4 id="requisitos-nao-funcionais">Requisitos Não Funcionais</h4>
+<p>Abrangem aspectos que não estão diretamente relacionados às funcionalidades do backend, mas que são essenciais para a qualidade e o desempenho do sistema. Incluem características como:</p>
+<ul>
+<li><strong>Desempenho:</strong> Tempo de resposta das operações, capacidade de processamento de dados.</li>
+<li><strong>Segurança:</strong> Proteção contra ataques cibernéticos, criptografia de dados sensíveis.</li>
+<li><strong>Escalabilidade:</strong> Capacidade de lidar com um aumento no número de usuários e na quantidade de dados.</li>
+<li><strong>Disponibilidade:</strong> Tempo em que o sistema está disponível para uso.</li>
+<li><strong>Manutenibilidade:</strong> Facilidade de atualizar e modificar o código do sistema.</li>
+</ul>
+<p>Exemplos de requisitos não funcionais:</p>
+<ul>
+<li>"O tempo de resposta de cada operação não deve exceder 1 segundo."</li>
+<li>"O sistema deve ser capaz de processar 10.000 transações por minuto."</li>
+<li>"O sistema deve estar disponível 24 horas por dia, 7 dias por semana."</li>
+</ul>
+<h4 id="regras-de-negocio">Regras de Negócio</h4>
+<p>Definem as políticas e restrições que regem o funcionamento do sistema e como ele deve responder a diferentes eventos. São derivadas das necessidades do negócio e podem ser expressas em linguagem natural ou em uma linguagem de modelagem.</p>
+<p>Exemplos de regras de negócio:</p>
+<ul>
+<li>"Um cliente só pode ter um pedido em aberto por vez."</li>
+<li>"O desconto máximo permitido em um produto é de 30%."</li>
+<li>"Um usuário só pode acessar determinadas áreas do sistema se tiver permissão de administrador."</li>
+</ul>
+<h3 id="tecnicas-de-elicitacao">Técnicas de Elicitação</h3>
+<p>A elicitação de requisitos em backend envolve a coleta de informações de diversas fontes, como:</p>
+<ul>
+<li><strong>Stakeholders:</strong> Entrevistas com usuários, gerentes de produto, especialistas de domínio e outros envolvidos no projeto.</li>
+<li><strong>Documentação existente:</strong> Análise de documentos como manuais de usuário, especificações técnicas e relatórios de requisitos de sistemas similares.</li>
+<li><strong>Análise de sistemas legados:</strong> Estudo de sistemas existentes que serão substituídos ou integrados ao novo sistema.</li>
+<li><strong>Workshops e brainstorming:</strong> Sessões colaborativas para gerar ideias e identificar requisitos.</li>
+</ul>
+<h3 id="documentacao-de-requisitos">Documentação de Requisitos</h3>
+<p>A documentação de requisitos em backend deve ser clara, concisa e organizada. Algumas formas comuns de documentar requisitos em backend são:</p>
+<ul>
+<li><strong>Casos de uso:</strong> Descrevem as interações entre os atores (usuários, sistemas externos) e o sistema para alcançar um objetivo específico.</li>
+<li><strong>Histórias de usuário:</strong> Descrições concisas e em linguagem natural das funcionalidades desejadas do ponto de vista do usuário.</li>
+<li><strong>Diagramas de sequência:</strong> Representações visuais da sequência de mensagens trocadas entre os objetos do sistema.</li>
+<li><strong>Diagramas de classe:</strong> Representações visuais da estrutura e das relações entre as classes do sistema.</li>
+<li><strong>Especificações de API:</strong> Descrições detalhadas das interfaces de programação de aplicativos (APIs) que o sistema oferece.</li>
+</ul>
+<p>Ao dominar a Análise de Requisitos em Backend, você estará apto a construir sistemas robustos, eficientes e que atendam às necessidades do negócio e dos usuários de forma eficaz.</p>
+<h2 id="2-analise-de-viabilidade-em-backend">2. Análise de Viabilidade em Backend</h2>
+<p>A Análise de Viabilidade em Backend é o processo de avaliar se os requisitos identificados na etapa anterior são realistas e podem ser implementados com sucesso, considerando as restrições técnicas, de tempo, de custo e de recursos disponíveis.</p>
+<h3 id="viabilidade-tecnica">Viabilidade Técnica</h3>
+<p>A viabilidade técnica avalia se os requisitos podem ser implementados com as tecnologias, ferramentas e conhecimentos disponíveis. É importante considerar:</p>
+<ul>
+<li><strong>Tecnologias:</strong> As linguagens de programação, frameworks, bancos de dados e outras tecnologias escolhidas para o projeto são adequadas para atender aos requisitos? Elas oferecem o desempenho, a segurança e a escalabilidade necessários?</li>
+<li><strong>Ferramentas:</strong> As ferramentas de desenvolvimento, como IDEs, depuradores e ferramentas de teste, são suficientes para construir e manter o sistema?</li>
+<li><strong>Equipe:</strong> A equipe de desenvolvimento possui as habilidades e a experiência necessárias para trabalhar com as tecnologias escolhidas e implementar os requisitos?</li>
+<li><strong>Infraestrutura:</strong> A infraestrutura de hardware e software disponível (servidores, redes, sistemas operacionais) é capaz de suportar o sistema em produção?</li>
+</ul>
+<h3 id="viabilidade-de-design">Viabilidade de Design</h3>
+<p>A viabilidade de design avalia se os requisitos podem ser implementados de forma eficiente, escalável e manutenível. É importante considerar:</p>
+<ul>
+<li><strong>Arquitetura:</strong> A arquitetura do sistema (monolítica, microsserviços, etc.) é adequada para atender aos requisitos de desempenho, escalabilidade e flexibilidade?</li>
+<li><strong>Design de dados:</strong> O modelo de dados escolhido (relacional, NoSQL, etc.) é adequado para armazenar e recuperar os dados do sistema de forma eficiente?</li>
+<li><strong>Design de código:</strong> O código do sistema segue boas práticas de programação, como modularidade, coesão e baixo acoplamento? Isso facilita a manutenção e evolução do sistema.</li>
+<li><strong>Padrões de projeto:</strong> O uso de padrões de projeto estabelecidos pode ajudar a resolver problemas comuns de design e melhorar a qualidade do código.</li>
+</ul>
+<h3 id="ferramentas-e-metodos">Ferramentas e Métodos</h3>
+<p>Existem diversas ferramentas e métodos que podem auxiliar na análise de viabilidade em backend:</p>
+<ul>
+<li><strong>Provas de conceito (PoCs):</strong> Implementações em pequena escala de funcionalidades críticas para validar a viabilidade técnica e testar diferentes abordagens.</li>
+<li><strong>Análise de riscos:</strong> Identificação e avaliação dos riscos técnicos que podem impactar o projeto, como a falta de experiência da equipe com uma determinada tecnologia ou a dependência de componentes externos.</li>
+<li><strong>Estimativas de esforço:</strong> Cálculo do tempo e dos recursos necessários para implementar os requisitos, considerando a complexidade das tarefas e a experiência da equipe.</li>
+<li><strong>Análise de custos:</strong> Estimativa dos custos de desenvolvimento, incluindo licenças de software, hardware, infraestrutura e salários da equipe.</li>
+</ul>
+<p>Ao realizar uma análise de viabilidade completa, você pode tomar decisões informadas sobre a implementação dos requisitos, identificar e mitigar riscos e garantir que o projeto seja entregue com sucesso, dentro do prazo e do orçamento.</p>
+<h2 id="3-priorizacao-de-requisitos-em-backend">3. Priorização de Requisitos em Backend</h2>
+<p>A Priorização de Requisitos em Backend é o processo de organizar e classificar os requisitos identificados de acordo com sua importância e impacto no projeto. Essa etapa é crucial para garantir que os recursos sejam alocados de forma eficiente e que as funcionalidades mais importantes sejam desenvolvidas e entregues primeiro.</p>
+<h3 id="importancia-da-priorizacao">Importância da Priorização</h3>
+<p>A priorização de requisitos oferece diversos benefícios para o projeto:</p>
+<ul>
+<li><strong>Foco:</strong> Permite que a equipe de desenvolvimento se concentre nas funcionalidades mais importantes, evitando dispersão de esforços.</li>
+<li><strong>Gerenciamento de expectativas:</strong> Ajuda a alinhar as expectativas dos stakeholders em relação ao que será entregue em cada fase do projeto.</li>
+<li><strong>Tomada de decisões:</strong> Facilita a tomada de decisões sobre quais requisitos devem ser implementados primeiro, caso haja restrições de tempo ou recursos.</li>
+<li><strong>Flexibilidade:</strong> Permite que o projeto se adapte a mudanças nas prioridades do negócio ou nas necessidades dos usuários.</li>
+</ul>
+<h3 id="criterios-de-priorizacao">Critérios de Priorização</h3>
+<p>Existem diversos critérios que podem ser utilizados para priorizar os requisitos em backend:</p>
+<ul>
+<li><strong>Valor de negócio:</strong> Qual o impacto do requisito no sucesso do negócio? Ele gera receita, reduz custos, melhora a eficiência ou aumenta a satisfação do cliente?</li>
+<li><strong>Urgência:</strong> Qual a necessidade de implementar o requisito em curto prazo? Ele é essencial para o lançamento do produto ou para atender a uma demanda urgente do mercado?</li>
+<li><strong>Risco:</strong> Qual o risco de não implementar o requisito? Ele pode causar problemas de segurança, perda de dados, insatisfação do cliente ou impacto negativo na imagem da empresa?</li>
+<li><strong>Custo:</strong> Qual o custo de implementar o requisito? Ele requer recursos adicionais, como tempo, dinheiro ou mão de obra especializada?</li>
+<li><strong>Dependências:</strong> O requisito depende de outros requisitos para ser implementado? Ele é um pré-requisito para outras funcionalidades?</li>
+</ul>
+<h3 id="tecnicas-de-priorizacao">Técnicas de Priorização</h3>
+<p>Existem diversas técnicas que podem ser utilizadas para priorizar os requisitos em backend:</p>
+<ul>
+<li><strong>MoSCoW:</strong> Classifica os requisitos em quatro categorias:<ul>
+<li><strong>Must Have:</strong> Requisitos essenciais para o sucesso do projeto.</li>
+<li><strong>Should Have:</strong> Requisitos importantes, mas não essenciais.</li>
+<li><strong>Could Have:</strong> Requisitos desejáveis, mas que podem ser adiados.</li>
+<li><strong>Won't Have:</strong> Requisitos que não serão implementados nesta versão do projeto.</li>
+</ul>
+</li>
+<li><strong>Kano:</strong> Analisa a satisfação do cliente em relação aos requisitos, classificando-os em cinco categorias:<ul>
+<li><strong>Obrigatórios:</strong> Requisitos básicos que, se não forem atendidos, causam insatisfação.</li>
+<li><strong>Unidimensionais:</strong> Requisitos que, quanto mais presentes, mais satisfação geram.</li>
+<li><strong>Atraentes:</strong> Requisitos que surpreendem e encantam o cliente.</li>
+<li><strong>Indiferentes:</strong> Requisitos que não geram nem satisfação nem insatisfação.</li>
+<li><strong>Reversos:</strong> Requisitos que, quanto mais presentes, mais insatisfação geram.</li>
+</ul>
+</li>
+<li><strong>Matriz de Priorização:</strong> Atribui pesos aos critérios de priorização e calcula uma pontuação para cada requisito, permitindo ordená-los por ordem de importância.</li>
+</ul>
+<p>A escolha da técnica de priorização dependerá do contexto do projeto, dos critérios de priorização definidos e das preferências da equipe de desenvolvimento. É importante envolver os stakeholders nesse processo para garantir que as prioridades estejam alinhadas com as necessidades do negócio e dos usuários.</p>
+<h2 id="4-ferramentas-e-modelos-para-backend">4. Ferramentas e Modelos para Backend</h2>
+<p>A Análise de Requisitos em Backend se beneficia de uma variedade de ferramentas e modelos que auxiliam na organização, visualização e comunicação dos requisitos, além de facilitar o processo de desenvolvimento e manutenção do sistema.</p>
+<h3 id="ferramentas-para-backend">Ferramentas para Backend</h3>
+<ul>
+<li><strong>Ferramentas de gerenciamento de projetos:</strong><ul>
+<li><strong>Jira:</strong> Permite o acompanhamento de tarefas, bugs e issues, facilitando a organização e o planejamento do desenvolvimento.</li>
+<li><strong>Trello:</strong> Oferece um quadro visual para organizar tarefas e acompanhar o progresso do projeto.</li>
+<li><strong>Asana:</strong> Permite a criação de projetos, tarefas e subtarefas, além de facilitar a colaboração entre equipes.</li>
+</ul>
+</li>
+<li><strong>Ferramentas de documentação:</strong><ul>
+<li><strong>Confluence:</strong> Plataforma colaborativa para criar, compartilhar e organizar documentos, como especificações de requisitos, diagramas e manuais.</li>
+<li><strong>Swagger:</strong> Ferramenta para documentar APIs REST, facilitando a compreensão e o uso da interface do sistema por outros desenvolvedores.</li>
+</ul>
+</li>
+<li><strong>Ferramentas de modelagem de dados:</strong><ul>
+<li><strong>MySQL Workbench:</strong> Ambiente visual para projetar, modelar e gerenciar bancos de dados MySQL.</li>
+<li><strong>DBeaver:</strong> Ferramenta universal para gerenciar e explorar diversos tipos de bancos de dados.</li>
+<li><strong>ER Studio:</strong> Software para modelagem de dados que permite criar diagramas entidade-relacionamento (ER) e gerar scripts SQL.</li>
+</ul>
+</li>
+<li><strong>Ferramentas de teste:</strong><ul>
+<li><strong>Postman:</strong> Ferramenta para testar APIs REST, enviando requisições e analisando as respostas.</li>
+<li><strong>JMeter:</strong> Ferramenta para realizar testes de carga e desempenho em aplicações web e APIs.</li>
+<li><strong>SoapUI:</strong> Ferramenta para testar APIs SOAP, permitindo criar e executar testes funcionais e de segurança.</li>
+</ul>
+</li>
+</ul>
+<h3 id="modelos-para-backend">Modelos para Backend</h3>
+<ul>
+<li><strong>Diagramas de Caso de Uso (UML):</strong> Representam as interações entre os atores (usuários, sistemas externos) e o sistema para alcançar um objetivo específico.</li>
+<li><strong>Diagramas de Sequência (UML):</strong> Ilustram a ordem temporal das mensagens trocadas entre os objetos do sistema durante a execução de um caso de uso.</li>
+<li><strong>Diagramas de Classe (UML):</strong> Representam a estrutura estática do sistema, mostrando as classes, seus atributos e métodos, e as relações entre elas.</li>
+<li><strong>Diagramas de Entidade-Relacionamento (ER):</strong> Modelam a estrutura de dados do sistema, mostrando as entidades, seus atributos e os relacionamentos entre elas.</li>
+<li><strong>Diagramas de Fluxo de Dados (DFD):</strong> Representam o fluxo de dados através do sistema, mostrando os processos, os armazenamentos de dados e as entidades externas.</li>
+</ul>
+<p>A escolha das ferramentas e modelos adequados dependerá das necessidades e preferências da equipe de desenvolvimento, bem como das características do projeto. A utilização dessas ferramentas e modelos pode agilizar o processo de desenvolvimento, facilitar a comunicação entre os membros da equipe e garantir a qualidade do produto final.</p>
+<h3 id="desafio-final-analise-de-requisitos-para-um-modulo-backend">Desafio Final: Análise de Requisitos para um Módulo Backend</h3>
+<p><strong>Cenário:</strong></p>
+<p>Você faz parte da equipe de desenvolvimento de um novo sistema web. Sua tarefa é realizar a Análise de Requisitos para um módulo backend específico.</p>
+<p><strong>Tarefas:</strong></p>
+<ol>
+<li><strong>Escolha do Módulo:</strong> Selecione um módulo backend do sistema (ex: autenticação de usuários, gerenciamento de produtos, processamento de pagamentos).</li>
+<li><strong>Elicitação de Requisitos:</strong> Entreviste usuários, stakeholders e especialistas de domínio para coletar requisitos funcionais, não funcionais, regras de negócio, requisitos de usuário e requisitos de sistema para o módulo escolhido.</li>
+<li><strong>Documentação de Requisitos:</strong> Documente os requisitos elicitados de forma clara e organizada, utilizando casos de uso, histórias de usuário, diagramas de sequência, diagramas de classe ou outros modelos adequados. Classifique os requisitos em suas respectivas categorias.</li>
+<li><strong>Análise de Viabilidade:</strong> Avalie a viabilidade técnica e de design dos requisitos, considerando as tecnologias disponíveis (linguagens de programação, frameworks, bancos de dados), as restrições de infraestrutura e os padrões de projeto aplicáveis.</li>
+<li><strong>Priorização de Requisitos:</strong> Priorize os requisitos de acordo com sua importância para o projeto, utilizando técnicas como MoSCoW, Kano ou matriz de priorização, levando em consideração o valor de negócio, a urgência, o risco e o custo de cada requisito.</li>
+</ol>
+<p><strong>Entrega:</strong></p>
+<p>Crie um repositório no GitHub para o projeto e adicione um arquivo README.md com a documentação completa da Análise de Requisitos. Inclua:</p>
+<ul>
+<li>Descrição detalhada do módulo backend escolhido.</li>
+<li>Lista completa dos requisitos elicitados, classificados por tipo (funcional, não funcional, regras de negócio, requisitos de usuário, requisitos de sistema).</li>
+<li>Análise de viabilidade técnica e de design, incluindo justificativas para as escolhas tecnológicas e de arquitetura.</li>
+<li>Priorização dos requisitos, com explicação dos critérios utilizados e da ordem de importância estabelecida.</li>
+<li>Diagramas ou modelos que auxiliem na compreensão dos requisitos e do funcionamento do módulo (opcional).</li>
+</ul>
+<p><strong>Avaliação:</strong></p>
+<p>Sua entrega será avaliada individualmente, considerando:</p>
+<ul>
+<li>A qualidade e completude da elicitação e documentação dos requisitos.</li>
+<li>A profundidade e a pertinência da análise de viabilidade.</li>
+<li>A coerência e a justificativa da priorização dos requisitos.</li>
+<li>A clareza e a organização da documentação.</li>
+<li>O uso adequado de ferramentas e modelos para representar os requisitos.</li>
+</ul>
+<p>Este desafio prático permitirá que você aplique os conceitos e técnicas aprendidos em um cenário real de desenvolvimento backend, preparando você para os desafios do mercado de trabalho.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>

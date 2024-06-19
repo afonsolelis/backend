@@ -12,13 +12,13 @@
         <meta name="author" content="Nome do Autor">
       
       
-        <link rel="canonical" href="https://seusite.com/mcontro/">
+        <link rel="canonical" href="https://seusite.com/13_autenticacao_criptografia_usuarios/">
       
       
-        <link rel="prev" href="../sails/">
+        <link rel="prev" href="../12_deploy_render/">
       
       
-        <link rel="next" href="../endpoints/">
+        <link rel="next" href="../14_revisao_direcionamento_projetos/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Node, Models e Controllers - Módulo Backend</title>
+        <title>Autenticação com Criptografia de Usuários - Módulo Backend</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#autenticacao-com-criptografia-de-usuarios" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Node, Models e Controllers
+              Autenticação com Criptografia de Usuários
             
           </span>
         </div>
@@ -225,54 +230,12 @@
   
   
   
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Introdução
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            Introdução
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../1_analise_requisitos_viabilidade/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Visão Geral
+    Análise de Requisitos e Viabilidade
   </span>
   
 
@@ -280,69 +243,19 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Configuração do Ambiente
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Configuração do Ambiente
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../2_gitflow_conventional_commits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Sistemas Operacionais e Dockerização
+    GitFlow e Conventional Commits
   </span>
   
 
@@ -350,69 +263,19 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Modelagem de Dados
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Modelagem de Dados
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../bd/" class="md-nav__link">
+      <a href="../3_virtualizacao_node_docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Modelando Banco de Dados
+    Virtualização, Node e Docker
   </span>
   
 
@@ -420,20 +283,19 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../crudbd/" class="md-nav__link">
+      <a href="../4_modelagem_bd_models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    CRUD em Bancos de Dados
+    Modelagem de Banco de Dados e Models
   </span>
   
 
@@ -441,20 +303,19 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../sqlav/" class="md-nav__link">
+      <a href="../5_rotas_controllers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    SQL Avançado
+    Rotas e Controllers
   </span>
   
 
@@ -462,69 +323,19 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Desenvolvimento
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Desenvolvimento
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../sails/" class="md-nav__link">
+      <a href="../6_atividade_avaliativa_individual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Sails JS
+    Atividade Avaliativa Individual
   </span>
   
 
@@ -532,10 +343,129 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7_queries_sql_avancadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Queries SQLs Avançadas em Banco de Dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8_helpers_camadas_auxiliares_mvc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpers e Camadas Auxiliares do MVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9_avaliacao_multidisciplinar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliação Multidisciplinar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_filas_rabbitmq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filas com RabbitMQ e Controle Assíncrono de Requisições
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_tdd_testes_unitarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TDD e Testes Unitários
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_deploy_render/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy com Render (Web Service + PostgreSQL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
   
   
     
@@ -547,12 +477,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Node, Models e Controllers
+    Autenticação com Criptografia de Usuários
   </span>
   
 
@@ -561,20 +493,19 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../endpoints/" class="md-nav__link">
+      <a href="../14_revisao_direcionamento_projetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Endpoints de Leitura e Escrita
+    Revisão e Direcionamento de Projetos
   </span>
   
 
@@ -582,151 +513,23 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Qualidade e Automação
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Qualidade e Automação
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../testes/" class="md-nav__link">
+      <a href="../15_avaliacao_semestral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Testes e Automação
+    Avaliação Semestral
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Deploy
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Deploy
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deploy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deploy em Servidor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -749,9 +552,7 @@
   
 
 
-  <h1>Node, Models e Controllers</h1>
-
-
+<h1 id="autenticacao-com-criptografia-de-usuarios">Autenticação com Criptografia de Usuários</h1>
 
 
 
