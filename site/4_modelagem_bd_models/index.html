@@ -12,24 +12,28 @@
         <meta name="author" content="Nome do Autor">
       
       
-        <link rel="canonical" href="https://seusite.com/">
+        <link rel="canonical" href="https://seusite.com/4_modelagem_bd_models/">
       
       
+        <link rel="prev" href="../3_virtualizacao_node_docker/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../5_rotas_controllers/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Módulo Backend</title>
+        <title>Modelagem de Banco de Dados e Models - Módulo Backend</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#modelagem-de-banco-de-dados-e-models" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="." title="Módulo Backend" class="md-header__button md-logo" aria-label="Módulo Backend" data-md-component="logo">
+    <a href=".." title="Módulo Backend" class="md-header__button md-logo" aria-label="Módulo Backend" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -103,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Modelagem de Banco de Dados e Models
             
           </span>
         </div>
@@ -192,7 +201,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Módulo Backend" class="md-nav__button md-logo" aria-label="Módulo Backend" data-md-component="logo">
+    <a href=".." title="Módulo Backend" class="md-nav__button md-logo" aria-label="Módulo Backend" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -222,7 +231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="1_analise_requisitos_viabilidade/" class="md-nav__link">
+      <a href="../1_analise_requisitos_viabilidade/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -242,7 +251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2_gitflow_conventional_commits/" class="md-nav__link">
+      <a href="../2_gitflow_conventional_commits/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -262,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="3_virtualizacao_node_docker/" class="md-nav__link">
+      <a href="../3_virtualizacao_node_docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,10 +288,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="4_modelagem_bd_models/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modelagem de Banco de Dados e Models
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -291,6 +320,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tópicos:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -302,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="5_rotas_controllers/" class="md-nav__link">
+      <a href="../5_rotas_controllers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -322,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="6_atividade_avaliativa_individual/" class="md-nav__link">
+      <a href="../6_atividade_avaliativa_individual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -342,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="7_queries_sql_avancadas/" class="md-nav__link">
+      <a href="../7_queries_sql_avancadas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="8_helpers_camadas_auxiliares_mvc/" class="md-nav__link">
+      <a href="../8_helpers_camadas_auxiliares_mvc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="9_avaliacao_multidisciplinar/" class="md-nav__link">
+      <a href="../9_avaliacao_multidisciplinar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="10_filas_rabbitmq/" class="md-nav__link">
+      <a href="../10_filas_rabbitmq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="11_tdd_testes_unitarios/" class="md-nav__link">
+      <a href="../11_tdd_testes_unitarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="12_deploy_render/" class="md-nav__link">
+      <a href="../12_deploy_render/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="13_autenticacao_criptografia_usuarios/" class="md-nav__link">
+      <a href="../13_autenticacao_criptografia_usuarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="14_revisao_direcionamento_projetos/" class="md-nav__link">
+      <a href="../14_revisao_direcionamento_projetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -502,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="15_avaliacao_semestral/" class="md-nav__link">
+      <a href="../15_avaliacao_semestral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,84 +591,11 @@
   
 
 
-  <h1>Home</h1>
-
-<p><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- jQuery --></p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Font Awesome -->
-<p><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"></p>
-<style>
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    .btn a {
-      color: inherit;
-      text-decoration: none;
-  }
-  </style>
-
-<div class="container">
-    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded" alt="figura de um notebook na mesa">
-  </div>
-<section class="container mt-5">
-    <div class="row">
-        <div class="col-12 text-center">
-            <h2>Protocolo HTTP e Comunicação Web</h2>
-            <p>O HyperText Transfer Protocol (HTTP) é a espinha dorsal da World Wide Web. Ele define como as mensagens são formatadas e transmitidas, e como servidores e navegadores respondem a diferentes comandos. O HTTP usa um modelo cliente-servidor, onde o navegador é o cliente e a aplicação no servidor web é o servidor.</p>
-        </div>
-    </div>
-
-    <div class="row mt-4">
-        <div class="col-12">
-            <img src="https://res.cloudinary.com/dyhjjms8y/image/upload/v1717986853/Captura_de_tela_2024-06-10_023128_kwkkzh.png" alt="Funcionamento do HTTP" class="img-fluid w-100">
-            <p class="mt-2 text-center">O diagrama acima ilustra o processo de requisição e resposta entre cliente e servidor, fundamental para o funcionamento do HTTP.</p>
-        </div>
-    </div>
-
-    <div class="row mt-4">
-        <div class="col-12">
-            <img src="https://res.cloudinary.com/dyhjjms8y/image/upload/v1717986853/Captura_de_tela_2024-06-10_023237_mkvsaj.png" alt="Verbos, URLs e URIs" class="img-fluid w-100">
-            <p class="mt-2 text-center">Verbos HTTP (GET, POST, PUT, DELETE, etc.), URLs e URIs são elementos cruciais para especificar ações e recursos na comunicação web.</p>
-        </div>
-    </div>
-
-    <div class="row mt-4">
-        <div class="col-12">
-            <img src="https://res.cloudinary.com/dyhjjms8y/image/upload/v1717986853/Captura_de_tela_2024-06-10_023249_bjkpyw.png" alt="Arquitetura MVC" class="img-fluid w-100">
-            <p class="mt-2 text-center">A arquitetura MVC (Model-View-Controller) é frequentemente usada em aplicações web para organizar a lógica, apresentação e interação com o usuário.</p>
-        </div>
-    </div>
-
-    <div class="row mt-4">
-        <div class="col-6">
-            <img src="https://res.cloudinary.com/dyhjjms8y/image/upload/v1717986853/Captura_de_tela_2024-06-10_023225_sgoflp.png" alt="Método GET" class="img-fluid w-100">
-            <p class="mt-2 text-center">O método GET é usado para solicitar dados do servidor.</p>
-        </div>
-        <div class="col-6">
-            <img src="https://res.cloudinary.com/dyhjjms8y/image/upload/v1717986853/Captura_de_tela_2024-06-10_023219_pwmfrl.png" alt="Método POST" class="img-fluid w-100">
-            <p class="mt-2 text-center">O método POST é usado para enviar dados ao servidor para processamento.</p>
-        </div>
-    </div>
-
-    <div class="row mt-4">
-        <div class="col-12 text-center">
-            <p>Outros protocolos importantes na web incluem HTTPS (HTTP seguro), FTP (transferência de arquivos) e WebSocket (comunicação bidirecional em tempo real).</p>
-        </div>
-    </div>
-  </section>
-
-<section class="container">
-    <div class="card text-dark bg-light mb-3">
-      <div class="card-header">Como a World Wide Web Funciona</div>
-      <div class="card-body">
-        <h5 class="card-title">Entendendo a Web</h5>
-        <p class="card-text">A World Wide Web (WWW) é um sistema de documentos interligados acessíveis via Internet. Esses documentos são formatados em HTML (HyperText Markup Language) e podem ser visualizados por navegadores web. A comunicação na web é feita através do protocolo HTTP (HyperText Transfer Protocol).</p>
-        <p class="card-text">Quando um usuário digita um endereço web (URL) em um navegador, este envia uma solicitação HTTP ao servidor onde o site está hospedado. O servidor responde com o código HTML da página solicitada, que o navegador renderiza para o usuário. Esse processo permite que informações e serviços sejam acessados de maneira rápida e eficiente.</p>
-      </div>
-    </div>
-  </section>
+<h1 id="modelagem-de-banco-de-dados-e-models">Modelagem de Banco de Dados e Models</h1>
+<h2 id="topicos">Tópicos:</h2>
+<ul>
+<li>Arquiteturas de Software em MVC e Padrões de Projeto</li>
+</ul>
 
 
 
@@ -657,10 +642,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "toc.integrate", "header.autohide"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
-      <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
