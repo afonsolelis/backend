@@ -1,0 +1,42 @@
+site_name: "Módulo Backend"
+site_description: "Documentação completa para o Módulo Backend"
+site_author: "Nome do Autor"
+site_url: "https://seusite.com"
+repo_url: "https://github.com/afonsolelis/backend"
+repo_name: "GitHub"
+
+nav:
+  - "Análise de Requisitos e Viabilidade": 1_analise_requisitos_viabilidade.md
+  - "GitFlow e Conventional Commits": 2_gitflow_conventional_commits.md
+  - "Virtualização, Node e Docker": 3_virtualizacao_node_docker.md
+  - "Modelagem de Banco de Dados e Models": 4_modelagem_bd_models.md
+  - "Rotas e Controllers": 5_rotas_controllers.md
+  - "Atividade Avaliativa Individual": 6_atividade_avaliativa_individual.md
+  - "Queries SQLs Avançadas em Banco de Dados": 7_queries_sql_avancadas.md
+  - "Helpers e Camadas Auxiliares do MVC": 8_helpers_camadas_auxiliares_mvc.md
+  - "Avaliação Multidisciplinar": 9_avaliacao_multidisciplinar.md
+  - "Filas com RabbitMQ e Controle Assíncrono de Requisições": 10_filas_rabbitmq.md
+  - "TDD e Testes Unitários": 11_tdd_testes_unitarios.md
+  - "Deploy com Render (Web Service + PostgreSQL)": 12_deploy_render.md
+  - "Autenticação com Criptografia de Usuários": 13_autenticacao_criptografia_usuarios.md
+  - "Revisão e Direcionamento de Projetos": 14_revisao_direcionamento_projetos.md
+  - "Avaliação Semestral": 15_avaliacao_semestral.md
+
+theme:
+  name: "material"
+  language: "pt"
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.instant
+    - toc.integrate
+    - header.autohide
+  palette:
+    primary: "indigo"
+    accent: "indigo"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+
+plugins:
+  - search
