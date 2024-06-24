@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://seusite.com/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/10_filas_rabbitmq/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/11_tdd_testes_unitarios/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/12_deploy_render/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/13_autenticacao_criptografia_usuarios/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/14_revisao_direcionamento_projetos/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/15_avaliacao_semestral/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/1_analise_requisitos_viabilidade/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/2_gitflow_conventional_commits/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/3_virtualizacao_node_docker/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/4_modelagem_bd_models/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/5_rotas_controllers/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/6_atividade_avaliativa_individual/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/7_queries_sql_avancadas/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/8_helpers_camadas_auxiliares_mvc/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://seusite.com/9_avaliacao_multidisciplinar/</loc>
-         <lastmod>2024-06-19</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
