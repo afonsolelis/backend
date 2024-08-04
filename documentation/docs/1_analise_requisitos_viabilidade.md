@@ -1,64 +1,6 @@
 # Análise de Requisitos e Viabilidade: Uma Aula Avançada com Desafio Prático
 
-## Instalação do Sails.js, Criação do Projeto e Organização da Documentação
-
-Vamos iniciar o processo desde a instalação do framework Sails.js até a criação da estrutura do projeto e a organização da documentação da Análise de Requisitos.
-
-![](https://sailsjs.com/images/get_started_hero@2x.png)
-
-### Passo a Passo
-
-1. **Instalar o Sails.js:**
-   * Certifique-se de ter o Node.js e o npm (gerenciador de pacotes do Node.js) instalados em sua máquina.
-   * Abra o terminal ou prompt de comando.
-   * Execute o comando `npm install sails -g` para instalar o Sails.js globalmente.
-
-2. **Criar o Projeto Sails:**
-   * Navegue até o diretório onde deseja criar o projeto.
-   * Execute o comando `sails new nome-do-projeto`.
-   * Escolha a opção "Empty App" quando solicitado.
-
-3. **Criar a Pasta de Documentação:**
-   * Dentro do diretório do projeto Sails (`nome-do-projeto`), crie uma pasta chamada `docs`.
-
-4. **Iniciar o Projeto (Opcional):**
-   * Para verificar se o projeto foi criado corretamente, navegue até o diretório do projeto e execute `sails lift`.
-   * O Sails iniciará um servidor local e você poderá acessar a aplicação em `http://localhost:1337`.
-
-5. **Adicionar e Commitar Arquivos:**
-   * Crie o arquivo `README.md` dentro da pasta `docs`.
-   * Utilize o Markdown para documentar a Análise de Requisitos, seguindo as instruções do Desafio Final.
-   * Salve o arquivo.
-   * No terminal, navegue até o diretório do projeto Sails.
-   * Execute os comandos:
-      * `git init` (para inicializar um repositório Git)
-      * `git add docs/README.md` (para adicionar o arquivo ao stage)
-      * `git commit -m "Adicionando documentação da Análise de Requisitos"` (para criar um commit com uma mensagem descritiva)
-
-6. **Criar o Repositório no GitHub:**
-   * Se desejar compartilhar seu projeto e a documentação, siga os passos:
-      * Crie um novo repositório no GitHub.
-      * No terminal, dentro do diretório do projeto, execute:
-         * `git remote add origin <URL do repositório>` (para conectar o repositório local ao remoto)
-         * `git push -u origin main` (para enviar as alterações para o repositório remoto)
-
-### Organização da Documentação
-
-Mantenha a pasta `docs` organizada, adicionando subpastas ou arquivos adicionais para cada tipo de requisito ou documento do projeto. Utilize a estrutura sugerida anteriormente.
-
-### Documentação do Sails.js
-
-Para mais informações sobre o Sails.js e suas funcionalidades, consulte a documentação oficial:
-
-* **Sails.js Documentation:** [https://sailsjs.com/documentation](https://sailsjs.com/documentation)
-
-### Observações
-
-* Certifique-se de ter o Node.js e o npm instalados antes de começar.
-* A pasta `docs` é uma convenção para armazenar documentação em projetos de software.
-* A criação de um repositório no GitHub é opcional, mas recomendada para facilitar o compartilhamento e a colaboração.
-
-Com este guia completo, você estará pronto para iniciar seu projeto Sails, documentar a Análise de Requisitos e compartilhar seu trabalho no GitHub.
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTYaVLE2uNAjPSA5OkJm6Ngf9yaBq_xe5sA28qecQL96qRH5m6kU1X6X66OS56kbw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1536" height="564" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ### Introdução
 
