@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -275,52 +275,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacao-do-sailsjs-criacao-do-projeto-e-organizacao-da-documentacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalação do Sails.js, Criação do Projeto e Organização da Documentação
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instalação do Sails.js, Criação do Projeto e Organização da Documentação">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#passo-a-passo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Passo a Passo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organizacao-da-documentacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organização da Documentação
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#documentacao-do-sailsjs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentação do Sails.js
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#observacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Observações
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#introducao" class="md-nav__link">
     <span class="md-ellipsis">
       Introdução
@@ -328,8 +282,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#objetivos-de-aprendizagem" class="md-nav__link">
     <span class="md-ellipsis">
       Objetivos de Aprendizagem
@@ -337,18 +291,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#conteudo-da-aula" class="md-nav__link">
     <span class="md-ellipsis">
       Conteúdo da Aula
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -869,80 +818,8 @@
 
 
 <h1 id="analise-de-requisitos-e-viabilidade-uma-aula-avancada-com-desafio-pratico">Análise de Requisitos e Viabilidade: Uma Aula Avançada com Desafio Prático</h1>
-<h2 id="instalacao-do-sailsjs-criacao-do-projeto-e-organizacao-da-documentacao">Instalação do Sails.js, Criação do Projeto e Organização da Documentação</h2>
-<p>Vamos iniciar o processo desde a instalação do framework Sails.js até a criação da estrutura do projeto e a organização da documentação da Análise de Requisitos.</p>
-<p><img alt="" src="https://sailsjs.com/images/get_started_hero@2x.png" /></p>
-<h3 id="passo-a-passo">Passo a Passo</h3>
-<ol>
-<li><strong>Instalar o Sails.js:</strong></li>
-<li>Certifique-se de ter o Node.js e o npm (gerenciador de pacotes do Node.js) instalados em sua máquina.</li>
-<li>Abra o terminal ou prompt de comando.</li>
-<li>
-<p>Execute o comando <code>npm install sails -g</code> para instalar o Sails.js globalmente.</p>
-</li>
-<li>
-<p><strong>Criar o Projeto Sails:</strong></p>
-</li>
-<li>Navegue até o diretório onde deseja criar o projeto.</li>
-<li>Execute o comando <code>sails new nome-do-projeto</code>.</li>
-<li>
-<p>Escolha a opção "Empty App" quando solicitado.</p>
-</li>
-<li>
-<p><strong>Criar a Pasta de Documentação:</strong></p>
-</li>
-<li>
-<p>Dentro do diretório do projeto Sails (<code>nome-do-projeto</code>), crie uma pasta chamada <code>docs</code>.</p>
-</li>
-<li>
-<p><strong>Iniciar o Projeto (Opcional):</strong></p>
-</li>
-<li>Para verificar se o projeto foi criado corretamente, navegue até o diretório do projeto e execute <code>sails lift</code>.</li>
-<li>
-<p>O Sails iniciará um servidor local e você poderá acessar a aplicação em <code>http://localhost:1337</code>.</p>
-</li>
-<li>
-<p><strong>Adicionar e Commitar Arquivos:</strong></p>
-</li>
-<li>Crie o arquivo <code>README.md</code> dentro da pasta <code>docs</code>.</li>
-<li>Utilize o Markdown para documentar a Análise de Requisitos, seguindo as instruções do Desafio Final.</li>
-<li>Salve o arquivo.</li>
-<li>No terminal, navegue até o diretório do projeto Sails.</li>
-<li>
-<p>Execute os comandos:</p>
-<ul>
-<li><code>git init</code> (para inicializar um repositório Git)</li>
-<li><code>git add docs/README.md</code> (para adicionar o arquivo ao stage)</li>
-<li><code>git commit -m "Adicionando documentação da Análise de Requisitos"</code> (para criar um commit com uma mensagem descritiva)</li>
-</ul>
-</li>
-<li>
-<p><strong>Criar o Repositório no GitHub:</strong></p>
-</li>
-<li>Se desejar compartilhar seu projeto e a documentação, siga os passos:<ul>
-<li>Crie um novo repositório no GitHub.</li>
-<li>No terminal, dentro do diretório do projeto, execute:<ul>
-<li><code>git remote add origin &lt;URL do repositório&gt;</code> (para conectar o repositório local ao remoto)</li>
-<li><code>git push -u origin main</code> (para enviar as alterações para o repositório remoto)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="organizacao-da-documentacao">Organização da Documentação</h3>
-<p>Mantenha a pasta <code>docs</code> organizada, adicionando subpastas ou arquivos adicionais para cada tipo de requisito ou documento do projeto. Utilize a estrutura sugerida anteriormente.</p>
-<h3 id="documentacao-do-sailsjs">Documentação do Sails.js</h3>
-<p>Para mais informações sobre o Sails.js e suas funcionalidades, consulte a documentação oficial:</p>
-<ul>
-<li><strong>Sails.js Documentation:</strong> <a href="https://sailsjs.com/documentation">https://sailsjs.com/documentation</a></li>
-</ul>
-<h3 id="observacoes">Observações</h3>
-<ul>
-<li>Certifique-se de ter o Node.js e o npm instalados antes de começar.</li>
-<li>A pasta <code>docs</code> é uma convenção para armazenar documentação em projetos de software.</li>
-<li>A criação de um repositório no GitHub é opcional, mas recomendada para facilitar o compartilhamento e a colaboração.</li>
-</ul>
-<p>Com este guia completo, você estará pronto para iniciar seu projeto Sails, documentar a Análise de Requisitos e compartilhar seu trabalho no GitHub.</p>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTYaVLE2uNAjPSA5OkJm6Ngf9yaBq_xe5sA28qecQL96qRH5m6kU1X6X66OS56kbw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1536" height="564" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 <h3 id="introducao">Introdução</h3>
 <p>A Análise de Requisitos e Viabilidade é essencial para o desenvolvimento de qualquer software, incluindo interfaces de usuário (frontend). Ela garante que o produto final atenda às necessidades dos usuários e seja viável dentro das restrições do projeto. Nesta aula, exploraremos os conceitos e técnicas da Análise de Requisitos e Viabilidade aplicados ao desenvolvimento frontend, culminando em um desafio prático para consolidar seu aprendizado.</p>
 <p><img alt="" src="https://profandreagarcia.wordpress.com/wp-content/uploads/2018/03/requisitos.jpg" /></p>
@@ -1209,7 +1086,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.instant", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
