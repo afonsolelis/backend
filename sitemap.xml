@@ -81,6 +81,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://seusite.com/calendario/</loc>
+         <lastmod>2024-08-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://seusite.com/tutorial_mvc/</loc>
          <lastmod>2024-08-06</lastmod>
          <changefreq>daily</changefreq>
