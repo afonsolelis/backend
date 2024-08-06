@@ -28,10 +28,15 @@
     }
   </style>
 
-  <div class="container">
-    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded" alt="figura de um notebook na mesa">
-  </div>
-  <section class="container mt-5">
+<h1>Comunidade Discord</h1>
+<a href="https://discord.gg/ARWA2FMz" class="btn btn-info" style="color: white; font-weight: bold;" target="blank_">💻 Discord</a>
+
+<div class="container my-1">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQp88zM4qBed7UudJY9xW56ADiDGOrabMz1dT_dh28b0G_nUwybzxDRXpTWNiq4o8MncU8FoSdyI3C3/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<h1>Revisão de Conceitos Bases</h1>
+<section class="container my-1">
     <div class="row">
         <div class="col-12 text-center">
             <h2>Protocolo HTTP e Comunicação Web</h2>
@@ -76,23 +81,23 @@
             <p>Outros protocolos importantes na web incluem HTTPS (HTTP seguro), FTP (transferência de arquivos) e WebSocket (comunicação bidirecional em tempo real).</p>
         </div>
     </div>
-  </section>
+</section>
 
-  <section class="container">
+<section class="container">
     <div class="card text-dark bg-light mb-3">
-      <div class="card-header">Como a World Wide Web Funciona</div>
-      <div class="card-body">
+        <div class="card-header">Como a World Wide Web Funciona</div>
+        <div class="card-body">
         <h5 class="card-title">Entendendo a Web</h5>
         <p class="card-text">A World Wide Web (WWW) é um sistema de documentos interligados acessíveis via Internet. Esses documentos são formatados em HTML (HyperText Markup Language) e podem ser visualizados por navegadores web. A comunicação na web é feita através do protocolo HTTP (HyperText Transfer Protocol).</p>
         <p class="card-text">Quando um usuário digita um endereço web (URL) em um navegador, este envia uma solicitação HTTP ao servidor onde o site está hospedado. O servidor responde com o código HTML da página solicitada, que o navegador renderiza para o usuário. Esse processo permite que informações e serviços sejam acessados de maneira rápida e eficiente.</p>
-      </div>
+        </div>
     </div>
-  </section>
+</section>
 
-  # Estrutura do Nosso Projeto
+<h2>Estrutura do Nosso Projeto</h2>
 
 <div class="directory-structure">
-        <div>/src</div>
+    <div>/src</div>
         <div class="directory">
             <div>/controllers</div>
             <div class="directory">
@@ -133,9 +138,9 @@
                 <div class="file">- helpers.ts</div>
             </div>
             <div class="file">- app.ts</div>
-            <div class="file">- server.ts</div>
-        </div>
+        <div class="file">- server.ts</div>
     </div>
+</div>
 
 <div class="container mt-5">
     <h2 class="mb-4">Cronograma de Aulas</h2>
