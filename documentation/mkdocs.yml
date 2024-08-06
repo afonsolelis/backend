@@ -6,6 +6,7 @@ repo_url: "https://github.com/afonsolelis/backend"
 repo_name: "GitHub"
 
 nav:
+  - "Tutorial MVC com Typescript": tutorial_mvc.md
   - "Análise de Requisitos e Viabilidade": 1_analise_requisitos_viabilidade.md
   - "GitFlow e Conventional Commits": 2_gitflow_conventional_commits.md
   - "Virtualização, Node e Docker": 3_virtualizacao_node_docker.md
