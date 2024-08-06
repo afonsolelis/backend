@@ -12,13 +12,11 @@
         <meta name="author" content="Nome do Autor">
       
       
-        <link rel="canonical" href="https://seusite.com/8_helpers_camadas_auxiliares_mvc/">
+        <link rel="canonical" href="https://seusite.com/tutorial_mvc/">
       
       
-        <link rel="prev" href="../7_queries_sql_avancadas/">
       
-      
-        <link rel="next" href="../9_avaliacao_multidisciplinar/">
+        <link rel="next" href="../1_analise_requisitos_viabilidade/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +24,7 @@
     
     
       
-        <title>Helpers e Camadas Auxiliares do MVC - Módulo Backend</title>
+        <title>Tutorial MVC com Typescript - Módulo Backend</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#helpers-e-camadas-auxiliares-do-mvc" class="md-skip">
+        <a href="#1-configuracao-do-ambiente" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Helpers e Camadas Auxiliares do MVC
+              Tutorial MVC com Typescript
             
           </span>
         </div>
@@ -228,10 +226,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tutorial_mvc/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial MVC com Typescript
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -240,6 +256,129 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-configuracao-do-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configuração do Ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Estrutura do Projeto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implementação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Implementação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srcappts" class="md-nav__link">
+    <span class="md-ellipsis">
+      src/app.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcmodelsusermodelts" class="md-nav__link">
+    <span class="md-ellipsis">
+      src/models/userModel.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srccontrollersusercontrollerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      src/controllers/userController.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcroutesuserroutests" class="md-nav__link">
+    <span class="md-ellipsis">
+      src/routes/userRoutes.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srcviewsuserviewts" class="md-nav__link">
+    <span class="md-ellipsis">
+      src/views/userView.ts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-executando-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Executando o Projeto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-testando-com-o-restclient-no-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Testando com o RestClient no VSCode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-adicionando-um-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Adicionando um .gitignore
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -388,19 +527,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../8_helpers_camadas_auxiliares_mvc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -409,7 +539,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -572,7 +701,167 @@
   
 
 
-<h1 id="helpers-e-camadas-auxiliares-do-mvc">Helpers e Camadas Auxiliares do MVC</h1>
+  <h1>Tutorial MVC com Typescript</h1>
+
+<h3 id="1-configuracao-do-ambiente">1. Configuração do Ambiente</h3>
+<ol>
+<li>
+<p><strong>Instale o Node.js e npm</strong>: Certifique-se de ter o Node.js e o npm instalados no seu sistema. Você pode baixá-los <a href="https://nodejs.org/">aqui</a>.</p>
+</li>
+<li>
+<p><strong>Crie um novo projeto</strong>: Abra o terminal e crie uma nova pasta para o seu projeto.</p>
+</li>
+</ol>
+<pre><code class="language-bash">mkdir meu-projeto-mvc
+cd meu-projeto-mvc
+npm init -y
+</code></pre>
+<ol>
+<li><strong>Instale as dependências necessárias</strong>:</li>
+</ol>
+<pre><code class="language-bash">npm install express typescript ts-node @types/node @types/express
+</code></pre>
+<ol>
+<li><strong>Configure o TypeScript</strong>: Crie um arquivo <code>tsconfig.json</code> na raiz do projeto com o seguinte conteúdo:</li>
+</ol>
+<pre><code class="language-json">{
+    &quot;compilerOptions&quot;: {
+    &quot;target&quot;: &quot;ES6&quot;,
+    &quot;module&quot;: &quot;commonjs&quot;,
+    &quot;strict&quot;: true,
+    &quot;esModuleInterop&quot;: true,
+    &quot;skipLibCheck&quot;: true,
+    &quot;forceConsistentCasingInFileNames&quot;: true,
+    &quot;outDir&quot;: &quot;./dist&quot;
+    },
+    &quot;include&quot;: [&quot;src/**/*&quot;],
+    &quot;exclude&quot;: [&quot;node_modules&quot;]
+}
+</code></pre>
+<h3 id="2-estrutura-do-projeto">2. Estrutura do Projeto</h3>
+<p>Crie a seguinte estrutura de pastas e arquivos no seu projeto:</p>
+<pre><code>meu-projeto-mvc/
+├── src/
+│   ├── controllers/
+│   │   └── userController.ts
+│   ├── models/
+│   │   └── userModel.ts
+│   ├── routes/
+│   │   └── userRoutes.ts
+│   ├── views/
+│   │   └── userView.ts
+│   ├── app.ts
+├── tsconfig.json
+├── package.json
+</code></pre>
+<h3 id="3-implementacao">3. Implementação</h3>
+<h4 id="srcappts"><code>src/app.ts</code></h4>
+<p>Este é o ponto de entrada do seu aplicativo.</p>
+<pre><code class="language-typescript">import express from 'express';
+import userRoutes from './routes/userRoutes';
+
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+app.use('/users', userRoutes);
+
+app.listen(port, () =&gt; {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+</code></pre>
+<h4 id="srcmodelsusermodelts"><code>src/models/userModel.ts</code></h4>
+<p>Aqui você define a estrutura dos dados.</p>
+<pre><code class="language-typescript">export interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+export const users: User[] = [];
+</code></pre>
+<h4 id="srccontrollersusercontrollerts"><code>src/controllers/userController.ts</code></h4>
+<p>Aqui você implementa a lógica de negócios.</p>
+<pre><code class="language-typescript">import { Request, Response } from 'express';
+import { users, User } from '../models/userModel';
+
+export const getUsers = (req: Request, res: Response): void =&gt; {
+  res.json(users);
+};
+
+export const createUser = (req: Request, res: Response): void =&gt; {
+  const newUser: User = {
+    id: users.length + 1,
+    ...req.body
+  };
+  users.push(newUser);
+  res.status(201).json(newUser);
+};
+</code></pre>
+<h4 id="srcroutesuserroutests"><code>src/routes/userRoutes.ts</code></h4>
+<p>Aqui você define as rotas do seu aplicativo.</p>
+<pre><code class="language-typescript">import { Router } from 'express';
+import { getUsers, createUser } from '../controllers/userController';
+
+const router = Router();
+
+router.get('/', getUsers);
+router.post('/', createUser);
+
+export default router;
+</code></pre>
+<h4 id="srcviewsuserviewts"><code>src/views/userView.ts</code></h4>
+<p>Neste exemplo simples, a camada de visualização pode ser omitida ou usada para formatar a saída de dados. Em um ambiente mais complexo, você pode usar templates.</p>
+<h3 id="4-executando-o-projeto">4. Executando o Projeto</h3>
+<p>Para rodar seu projeto, adicione um script no <code>package.json</code>:</p>
+<pre><code class="language-json">&quot;scripts&quot;: {
+  &quot;start&quot;: &quot;ts-node src/app.ts&quot;
+}
+</code></pre>
+<p>Então, no terminal, execute:</p>
+<pre><code class="language-bash">npm start
+</code></pre>
+<h3 id="5-testando-com-o-restclient-no-vscode">5. Testando com o RestClient no VSCode</h3>
+<p>Para testar sua API, você pode usar a extensão <a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client">RestClient</a> no VSCode. Crie um arquivo <code>requests.http</code> na raiz do projeto com o seguinte conteúdo:</p>
+<pre><code class="language-text">### Get all users
+GET http://localhost:3000/users
+Content-Type: application/json
+
+###
+
+### Create a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john.doe@example.com&quot;
+}
+</code></pre>
+<p>Para realizar os testes, basta abrir o arquivo <code>requests.http</code> no VSCode e clicar no botão "Send Request" que aparece acima de cada bloco de requisição.</p>
+<h3 id="6-adicionando-um-gitignore">6. Adicionando um .gitignore</h3>
+<p>Crie um arquivo <code>.gitignore</code> na raiz do projeto com o seguinte conteúdo para ignorar arquivos e pastas desnecessárias:</p>
+<pre><code class="language-gitignore"># Node modules
+node_modules/
+
+# TypeScript output
+dist/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+</code></pre>
 
 
 
