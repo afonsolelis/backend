@@ -29,7 +29,7 @@
   </style>
 
 <h1>Comunidade Discord</h1>
-<a href="https://discord.gg/ARWA2FMz" class="btn btn-info" style="color: white; font-weight: bold;" target="blank_">💻 Discord</a>
+<a href="https://discord.gg/C8qXnBATgG" class="btn btn-info" style="color: white; font-weight: bold;" target="blank_">💻 Discord</a>
 
 <div class="container my-1">
     <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQp88zM4qBed7UudJY9xW56ADiDGOrabMz1dT_dh28b0G_nUwybzxDRXpTWNiq4o8MncU8FoSdyI3C3/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
