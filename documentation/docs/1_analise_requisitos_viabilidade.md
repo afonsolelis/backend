@@ -248,3 +248,8 @@ Sua entrega será avaliada individualmente, considerando:
 
 Este desafio prático permitirá que você aplique os conceitos e técnicas aprendidos em um cenário real de desenvolvimento backend, preparando você para os desafios do mercado de trabalho.
 
+# Tarefa em sala de Aula
+
+- Crie seu github se não tiver
+- Crie o repositório de backend para web
+- Vamos criar a estrutura inicial e deixar preparado para a entrega de 0,5 pontos.

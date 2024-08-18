@@ -35,6 +35,11 @@
     <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQp88zM4qBed7UudJY9xW56ADiDGOrabMz1dT_dh28b0G_nUwybzxDRXpTWNiq4o8MncU8FoSdyI3C3/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 
+<div class="container my-1">
+    <p>Salas: Terças no Lab4 Principal, Quartas Lab3 Centro</p>
+</div>
+
+
 <h1>Revisão de Conceitos Bases</h1>
 <section class="container my-1">
     <div class="row">
@@ -153,71 +158,75 @@
         </thead>
         <tbody>
             <tr>
-                <td>06/08</td>
+                <td>Semana de 06/08</td>
                 <td>Análise de Requisitos e Viabilidade</td>
             </tr>
             <tr>
-                <td>13/08</td>
+                <td>Semana de 13/08</td>
                 <td>GitFlow e Conventional Commits - Boas Práticas de Desenvolvimento e Documentação (Criação do repositório individual) 0,5 pontos</td>
             </tr>
             <tr>
-                <td>20/08</td>
+                <td>Semana de 20/08</td>
                 <td>Virtualização, node e Docker (Criação de banco de dados postgres com docker compose e ambiente node)</td>
             </tr>
             <tr>
-                <td>27/08</td>
+                <td>Semana de 27/08</td>
                 <td>Modelagem de banco de dados e Models (Arquiteturas de Softwares em MVC e Padrões de Projeto)</td>
             </tr>
             <tr>
-                <td>03/09</td>
+                <td>Semana de 03/09</td>
                 <td>Rotas e Controllers (Continuação do MVC)</td>
             </tr>
             <tr>
-                <td>10/09</td>
+                <td>Semana de 10/09</td>
                 <td>TechWeek</td>
             </tr>
             <tr>
-                <td>17/09</td>
+                <td>Semana de 17/09</td>
                 <td>Queries SQLs avançadas em banco de dados</td>
             </tr>
             <tr>
-                <td>24/09</td>
+                <td>Semana de 24/09</td>
                 <td>Teste SQL Avançado 2,5 pontos</td>
             </tr>
             <tr>
-                <td>01/10</td>
+                <td>Semana de 01/10</td>
                 <td>Feriado</td>
             </tr>
             <tr>
-                <td>08/10</td>
+                <td>Semana de 08/10</td>
                 <td>Helpers e Camadas Auxiliares do MVC</td>
             </tr>
             <tr>
-                <td>15/10</td>
+                <td>Semana de 14/10</td>
                 <td>Avaliação Multidisciplinar - 1 ponto</td>
             </tr>
             <tr>
-                <td>22/10</td>
+                <td>Semana de 15/10</td>
+                <td>III TechWeek</td>
+            </tr>
+            <tr>
+                <td>Semana de 22/10</td>
                 <td>Filas com RabbitMQ e controle assíncrono de requisições</td>
             </tr>
             <tr>
-                <td>29/10</td>
+                <td>Semana de 29/10</td>
                 <td>TDD e testes unitários</td>
             </tr>
             <tr>
-                <td>05/11</td>
+                <td>Semana de 05/11</td>
                 <td>Deploy com render (web Service + PostgreSQL)</td>
             </tr>
             <tr>
-                <td>12/11</td>
+                <td>Semana de 12/11</td>
                 <td>Autenticação com criptografia de usuários</td>
             </tr>
             <tr>
-                <td>19/11</td>
+                <td>Semana de 19/11</td>
                 <td>Revisão e direcionamento de projetos</td>
             </tr>
             <tr>
-                <td>26/11</td>
+                <td>Semana de 26/11</td>
                 <td>Avaliação Semestral - Prova (2 pontos) + Projeto (4 pontos)</td>
             </tr>
         </tbody>
