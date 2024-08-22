@@ -1,6 +1,6 @@
 # Aula Básica de Git via Terminal
 
-<iframe width="100%" height="640" src="https://www.youtube.com/embed/wAJcX9KqxR8?si=hV5eQpPAgyMn8GeK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="640" src="https://www.youtube.com/embed/veTxtkXXKPg?si=oNBjc5BlMTIx3oFO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## O que é Git?
 
@@ -211,3 +211,5 @@ git commit -m "feat(login): adicionar autenticação de usuário"
 ## Trabalhando em equipe com Git Flow
 
 <iframe width="100%" height="640" src="https://www.youtube.com/embed/394mc6PV8t8?si=HGiQNR6SqbCcb_fN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="100%" height="640" src="https://www.youtube.com/embed/wAJcX9KqxR8?si=hV5eQpPAgyMn8GeK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
