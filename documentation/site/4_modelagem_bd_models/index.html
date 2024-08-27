@@ -15,6 +15,8 @@
         <link rel="canonical" href="https://seusite.com/4_modelagem_bd_models/">
       
       
+        <link rel="prev" href="../3_virtualizacao_node_docker/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modelagem-de-banco-de-dados-e-models" class="md-skip">
+        <a href="#introducao-as-linguagens-ddl-e-dml" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -320,6 +322,278 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modelagem de Banco de Dados e Models
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Modelagem de Banco de Dados e Models
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-as-linguagens-ddl-e-dml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução às Linguagens DDL e DML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelagem-de-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelagem de Banco de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelagem de Banco de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-modelagem-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Modelagem de Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-json-server-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. JSON Server Generator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração do Ambiente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração do Ambiente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-compose-para-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Docker Compose para PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dbeaver" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. DBeaver
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-de-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplos de SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ddl-data-definition-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. DDL (Data Definition Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dml-data-manipulation-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. DML (Data Manipulation Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-crud-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. CRUD Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-das-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura das Tabelas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura das Tabelas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criacao-das-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criação das Tabelas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insercao-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inserção de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inserção de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inserir-dados-em-varias-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inserir Dados em Várias Tabelas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultas-e-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultas e Joins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultas e Joins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-de-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos de Joins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-1-para-n-e-n-para-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relações 1 para N e N para N
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leituras-complementares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leituras Complementares
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -335,11 +609,167 @@
                   
 
 
-<h1 id="modelagem-de-banco-de-dados-e-models">Modelagem de Banco de Dados e Models</h1>
-<h2 id="topicos">Tópicos:</h2>
+<p>Para criar um tutorial completo de modelagem de banco de dados utilizando o JSON Server Generator e DBeaver, além de exemplos de SQL do básico ao avançado, siga os passos abaixo. Este tutorial inclui a configuração de um ambiente com Docker e PostgreSQL, bem como uma explicação das linguagens DDL e DML em SQL.</p>
+<h2 id="introducao-as-linguagens-ddl-e-dml">Introdução às Linguagens DDL e DML</h2>
+<p><strong>DDL (Data Definition Language):</strong><br />
+DDL é a parte do SQL que permite definir e modificar a estrutura dos objetos do banco de dados, como tabelas e índices. Comandos DDL incluem <code>CREATE</code>, <code>ALTER</code>, e <code>DROP</code>.</p>
+<p><strong>DML (Data Manipulation Language):</strong><br />
+DML é a parte do SQL usada para manipular os dados dentro das estruturas definidas. Comandos DML incluem <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, e <code>SELECT</code>.</p>
+<h2 id="modelagem-de-banco-de-dados">Modelagem de Banco de Dados</h2>
+<h3 id="1-modelagem-de-dados"><strong>1. Modelagem de Dados</strong></h3>
 <ul>
-<li>Arquiteturas de Software em MVC e Padrões de Projeto</li>
+<li><strong>Modelo Conceitual:</strong> Identifique as entidades e os relacionamentos. Exemplo: <em>Alunos</em>, <em>Professores</em>, <em>Cursos</em>.</li>
+<li><strong>Modelo Lógico:</strong> Defina os atributos, chaves primárias e estrangeiras para cada entidade.</li>
+<li><strong>Modelo Físico:</strong> Converta o modelo lógico em tabelas no banco de dados.</li>
 </ul>
+<h3 id="2-json-server-generator"><strong>2. JSON Server Generator</strong></h3>
+<p>Utilize o <a href="https://www.jsonservergenerator.com">JSON Server Generator</a> para criar um servidor JSON que simula uma API RESTful. Isso é útil para prototipar dados que serão usados no banco de dados.</p>
+<h2 id="configuracao-do-ambiente">Configuração do Ambiente</h2>
+<h3 id="1-docker-compose-para-postgresql"><strong>1. Docker Compose para PostgreSQL</strong></h3>
+<p>Crie um arquivo <code>docker-compose.yml</code> para configurar um container PostgreSQL:</p>
+<pre><code class="language-yaml">version: '3.1'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - &quot;5432:5432&quot;
+</code></pre>
+<h3 id="2-dbeaver"><strong>2. DBeaver</strong></h3>
+<ul>
+<li><strong>Instalação e Configuração:</strong> Instale o DBeaver e configure uma nova conexão com o PostgreSQL. O DBeaver é uma ferramenta gráfica que facilita a interação com bancos de dados, permitindo executar comandos SQL e visualizar dados de forma intuitiva.</li>
+</ul>
+<h2 id="exemplos-de-sql">Exemplos de SQL</h2>
+<p><img alt="exemplos" src="https://miro.medium.com/v2/format:webp/1*KJ0tDRYSeg-gMo_6nRH-XA.png" /></p>
+<h3 id="1-ddl-data-definition-language"><strong>1. DDL (Data Definition Language)</strong></h3>
+<ul>
+<li><strong>CREATE TABLE:</strong></li>
+</ul>
+<pre><code class="language-sql">CREATE TABLE Alunos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    curso_id INT
+);
+</code></pre>
+<ul>
+<li><strong>ALTER TABLE:</strong></li>
+</ul>
+<pre><code class="language-sql">ALTER TABLE Alunos ADD COLUMN email VARCHAR(100);
+</code></pre>
+<ul>
+<li><strong>DROP TABLE:</strong></li>
+</ul>
+<pre><code class="language-sql">DROP TABLE Alunos;
+</code></pre>
+<h3 id="2-dml-data-manipulation-language"><strong>2. DML (Data Manipulation Language)</strong></h3>
+<ul>
+<li><strong>INSERT:</strong></li>
+</ul>
+<pre><code class="language-sql">INSERT INTO Alunos (nome, curso_id) VALUES ('João Silva', 1);
+</code></pre>
+<ul>
+<li><strong>SELECT:</strong></li>
+</ul>
+<pre><code class="language-sql">SELECT * FROM Alunos;
+</code></pre>
+<ul>
+<li><strong>UPDATE:</strong></li>
+</ul>
+<pre><code class="language-sql">UPDATE Alunos SET email = 'joao.silva@example.com' WHERE id = 1;
+</code></pre>
+<ul>
+<li><strong>DELETE:</strong></li>
+</ul>
+<pre><code class="language-sql">DELETE FROM Alunos WHERE id = 1;
+</code></pre>
+<h3 id="3-crud-completo"><strong>3. CRUD Completo</strong></h3>
+<p>Para um CRUD completo, você pode seguir o seguinte fluxo:</p>
+<ul>
+<li><strong>Create:</strong> Inserir novos registros.</li>
+<li><strong>Read:</strong> Consultar registros existentes.</li>
+<li><strong>Update:</strong> Atualizar registros existentes.</li>
+<li><strong>Delete:</strong> Remover registros.</li>
+</ul>
+<p>Para ensinar conceitos como <em>primary key</em>, <em>foreign key</em>, <em>joins</em>, e relações de 1 para N e N para N, podemos criar um exemplo prático utilizando tabelas de um sistema acadêmico. Vamos usar as tabelas de <em>Cursos</em>, <em>Alunos</em>, e <em>Matrículas</em> para ilustrar esses conceitos.</p>
+<h2 id="estrutura-das-tabelas">Estrutura das Tabelas</h2>
+<h3 id="criacao-das-tabelas"><strong>Criação das Tabelas</strong></h3>
+<p>Vamos criar três tabelas: <em>Cursos</em>, <em>Alunos</em>, e <em>Matrículas</em>. As tabelas <em>Cursos</em> e <em>Alunos</em> terão uma chave primária, enquanto a tabela <em>Matrículas</em> será usada para representar uma relação N para N entre <em>Alunos</em> e <em>Cursos</em>.</p>
+<pre><code class="language-sql">CREATE TABLE Cursos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE Alunos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE Matriculas (
+    aluno_id INT REFERENCES Alunos(id),
+    curso_id INT REFERENCES Cursos(id),
+    PRIMARY KEY (aluno_id, curso_id)
+);
+</code></pre>
+<h3 id="explicacao"><strong>Explicação</strong></h3>
+<ul>
+<li><strong>Primary Key:</strong> A chave primária é um identificador único para cada registro em uma tabela. Nas tabelas <em>Cursos</em> e <em>Alunos</em>, a coluna <code>id</code> é a chave primária.</li>
+<li><strong>Foreign Key:</strong> A chave estrangeira é usada para criar um relacionamento entre duas tabelas. Na tabela <em>Matriculas</em>, <code>aluno_id</code> e <code>curso_id</code> são chaves estrangeiras que referenciam as tabelas <em>Alunos</em> e <em>Cursos</em>, respectivamente.</li>
+</ul>
+<h2 id="insercao-de-dados">Inserção de Dados</h2>
+<h3 id="inserir-dados-em-varias-tabelas"><strong>Inserir Dados em Várias Tabelas</strong></h3>
+<p>Vamos inserir dados nas tabelas <em>Cursos</em>, <em>Alunos</em>, e <em>Matrículas</em>.</p>
+<pre><code class="language-sql">-- Inserir dados na tabela Cursos
+INSERT INTO Cursos (nome) VALUES ('Matemática'), ('Física'), ('Química');
+
+-- Inserir dados na tabela Alunos
+INSERT INTO Alunos (nome) VALUES ('João Silva'), ('Maria Oliveira'), ('Carlos Souza');
+
+-- Inserir dados na tabela Matriculas
+INSERT INTO Matriculas (aluno_id, curso_id) VALUES 
+(1, 1),  -- João Silva matriculado em Matemática
+(1, 2),  -- João Silva matriculado em Física
+(2, 1),  -- Maria Oliveira matriculada em Matemática
+(3, 3);  -- Carlos Souza matriculado em Química
+</code></pre>
+<h2 id="consultas-e-joins">Consultas e Joins</h2>
+<h3 id="exemplos-de-joins"><strong>Exemplos de Joins</strong></h3>
+<ul>
+<li><strong>Inner Join:</strong> Retorna registros que têm correspondências em ambas as tabelas.</li>
+</ul>
+<pre><code class="language-sql">SELECT Alunos.nome AS aluno, Cursos.nome AS curso
+FROM Matriculas
+JOIN Alunos ON Matriculas.aluno_id = Alunos.id
+JOIN Cursos ON Matriculas.curso_id = Cursos.id;
+</code></pre>
+<ul>
+<li><strong>Left Join:</strong> Retorna todos os registros da tabela à esquerda e os registros correspondentes da tabela à direita.</li>
+</ul>
+<pre><code class="language-sql">SELECT Alunos.nome AS aluno, Cursos.nome AS curso
+FROM Alunos
+LEFT JOIN Matriculas ON Alunos.id = Matriculas.aluno_id
+LEFT JOIN Cursos ON Matriculas.curso_id = Cursos.id;
+</code></pre>
+<ul>
+<li><strong>Right Join:</strong> Retorna todos os registros da tabela à direita e os registros correspondentes da tabela à esquerda.</li>
+</ul>
+<pre><code class="language-sql">SELECT Alunos.nome AS aluno, Cursos.nome AS curso
+FROM Cursos
+RIGHT JOIN Matriculas ON Cursos.id = Matriculas.curso_id
+RIGHT JOIN Alunos ON Matriculas.aluno_id = Alunos.id;
+</code></pre>
+<h3 id="relacoes-1-para-n-e-n-para-n"><strong>Relações 1 para N e N para N</strong></h3>
+<ul>
+<li><strong>1 para N:</strong> Um curso pode ter muitos alunos matriculados. Isso é representado pela tabela <em>Matriculas</em>, onde um <code>curso_id</code> pode aparecer várias vezes.</li>
+<li><strong>N para N:</strong> Um aluno pode estar matriculado em vários cursos, e um curso pode ter vários alunos. A tabela <em>Matriculas</em> representa essa relação.</li>
+</ul>
+<p>Esses exemplos fornecem uma base sólida para entender como modelar e consultar dados em um banco de dados relacional, utilizando conceitos fundamentais de SQL.</p>
+<h1 id="leituras-complementares">Leituras Complementares</h1>
+<p><a href="https://medium.com/@aqilzeka99/a-comprehensive-guide-to-sql-commans-ddl-dql-dml-dcl-and-tcl-cd2de3540d4e">SQL commans (DDL, DQL, DML, DCL and TCL) Comprehensive Guide</a></p>
 
 
 

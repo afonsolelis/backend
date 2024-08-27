@@ -11,7 +11,7 @@ nav:
   - "Análise de Requisitos e Viabilidade": 1_analise_requisitos_viabilidade.md
   - "GitFlow e Conventional Commits": 2_gitflow_conventional_commits.md
   - "Virtualização, Node e Docker": 3_virtualizacao_node_docker.md
-  # - "Modelagem de Banco de Dados e Models": 4_modelagem_bd_models.md
+  - "Modelagem de Banco de Dados e Models": 4_modelagem_bd_models.md
   # - "Rotas e Controllers": 5_rotas_controllers.md
   # - "Atividade Avaliativa Individual": 6_atividade_avaliativa_individual.md
   # - "Queries SQLs Avançadas em Banco de Dados": 7_queries_sql_avancadas.md
