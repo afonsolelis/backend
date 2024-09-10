@@ -22,7 +22,7 @@
     
     
       
-        <title>Atividade Avaliativa Individual - Módulo Backend</title>
+        <title>Vamos Expandir as Rotas e Controllers! - Módulo Backend</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#atividade-avaliativa-individual" class="md-skip">
+        <a href="#vamos-expandir-as-rotas-e-controllers" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Atividade Avaliativa Individual
+              Vamos Expandir as Rotas e Controllers!
             
           </span>
         </div>
@@ -375,11 +375,157 @@
                   
 
 
-<h1 id="atividade-avaliativa-individual">Atividade Avaliativa Individual</h1>
-<h2 id="topicos">Tópicos:</h2>
+<h1 id="vamos-expandir-as-rotas-e-controllers">Vamos Expandir as Rotas e Controllers!</h1>
+<h2 id="modularizando-um-projeto-nodejs-com-express-e-typescript"><strong>Modularizando um Projeto Node.js com Express e TypeScript</strong></h2>
+<p>Nesta aula, vamos modularizar o nosso projeto para separá-lo em rotas, controllers e a configuração do banco de dados, proporcionando uma organização mais clara e facilitando a manutenção.</p>
+<h3 id="estrutura-do-projeto"><strong>Estrutura do Projeto</strong></h3>
+<ol>
+<li>
+<p>Vamos criar três novas pastas:</p>
 <ul>
-<li>Análise de conventional commits e boas práticas (0,5 ponto)</li>
+<li><code>routes</code>: para definir as rotas da API.</li>
+<li><code>controllers</code>: para a lógica de cada rota.</li>
+<li><code>config</code>: para a configuração do banco de dados.</li>
 </ul>
+</li>
+<li>
+<p>Reorganizaremos o código do servidor, movendo as rotas, controllers e a configuração do banco de dados para arquivos separados.</p>
+</li>
+</ol>
+<h3 id="estrutura-final-do-projeto"><strong>Estrutura Final do Projeto</strong></h3>
+<pre><code>src/
+│
+├── config/
+│   └── database.ts
+│
+├── controllers/
+│   └── userController.ts
+│
+├── routes/
+│   └── userRoutes.ts
+│
+├── migrations/
+│   └── migrations.ts
+│
+├── server.ts
+</code></pre>
+<h3 id="passos-para-modularizar-o-codigo"><strong>Passos para Modularizar o Código</strong></h3>
+<h4 id="1-configuracao-do-banco-de-dados-em-configdatabasets">1. <strong>Configuração do Banco de Dados em <code>config/database.ts</code></strong></h4>
+<p>Vamos mover a configuração do banco de dados para a pasta <code>config</code>:</p>
+<pre><code class="language-typescript">import { Pool } from 'pg';
+
+// Substitua pela sua string de conexão do Render.com
+const connectionString = 'sua_string_de_conexao_do_render_aqui';
+
+const pool = new Pool({
+  connectionString,
+  ssl: {
+    rejectUnauthorized: false, // Permite conexões SSL não autorizadas
+  }
+});
+
+export default pool;
+</code></pre>
+<h4 id="2-controllers-em-controllersusercontrollerts">2. <strong>Controllers em <code>controllers/userController.ts</code></strong></h4>
+<p>Agora, a lógica das rotas será movida para o controller. Este arquivo lidará com as requisições e interações com o banco de dados:</p>
+<pre><code class="language-typescript">import { Request, Response } from 'express';
+import pool from '../config/database';
+
+// Função para obter todos os usuários
+export const getUsers = async (req: Request, res: Response) =&gt; {
+  try {
+    const { rows } = await pool.query('SELECT * FROM users');
+    res.status(200).json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao buscar usuários' });
+  }
+};
+
+// Função para adicionar um novo usuário
+export const addUser = async (req: Request, res: Response) =&gt; {
+  const { name, email } = req.body;
+  try {
+    const queryText = 'INSERT INTO users(name, email) VALUES($1, $2) RETURNING *';
+    const { rows } = await pool.query(queryText, [name, email]);
+    res.status(201).json(rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao adicionar usuário' });
+  }
+};
+</code></pre>
+<h4 id="3-rotas-em-routesuserroutests">3. <strong>Rotas em <code>routes/userRoutes.ts</code></strong></h4>
+<p>As rotas serão movidas para a pasta <code>routes</code>. Aqui, simplesmente vincularemos as rotas com seus respectivos controllers:</p>
+<pre><code class="language-typescript">import { Router } from 'express';
+import { getUsers, addUser } from '../controllers/userController';
+
+const router = Router();
+
+router.get('/users', getUsers);
+router.post('/users', addUser);
+
+export default router;
+</code></pre>
+<h4 id="4-atualizacao-do-servidor-em-srcserverts">4. <strong>Atualização do Servidor em <code>src/server.ts</code></strong></h4>
+<p>Agora vamos atualizar o arquivo do servidor para utilizar as novas rotas:</p>
+<pre><code class="language-typescript">import express from 'express';
+import userRoutes from './routes/userRoutes';
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
+// Utilizando as rotas de usuários
+app.use(userRoutes);
+
+app.listen(PORT, () =&gt; {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+</code></pre>
+<h4 id="5-script-de-migracao-para-criar-tabela-em-migrationsmigrationsts">5. <strong>Script de Migração para Criar Tabela em <code>migrations/migrations.ts</code></strong></h4>
+<p>Aqui não haverá mudança. Certifique-se de executar a migração corretamente:</p>
+<pre><code class="language-typescript">import pool from '../config/database';
+
+const createUsersTable = async () =&gt; {
+  const client = await pool.connect();
+  try {
+    const queryText = `
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) UNIQUE NOT NULL
+      );
+    `;
+    await client.query(queryText);
+    console.log('Tabela &quot;users&quot; criada com sucesso!');
+  } catch (err) {
+    console.error('Erro ao criar tabela:', err);
+  } finally {
+    client.release();
+  }
+};
+
+createUsersTable().then(() =&gt; process.exit(0));
+</code></pre>
+<h4 id="6-executar-o-servidor">6. <strong>Executar o Servidor</strong></h4>
+<p>Agora, vamos executar o servidor com o comando:</p>
+<pre><code class="language-bash">npx ts-node src/server.ts
+</code></pre>
+<h4 id="7-testar-rotas-com-curl">7. <strong>Testar Rotas com <code>curl</code></strong></h4>
+<p>Use os comandos <code>curl</code> abaixo para testar as rotas.</p>
+<ul>
+<li><strong>Testar a Rota <code>GET /users</code></strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -X GET http://localhost:3000/users
+</code></pre>
+<ul>
+<li><strong>Testar a Rota <code>POST /users</code></strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -X POST http://localhost:3000/users -H &quot;Content-Type: application/json&quot; -d '{&quot;name&quot;: &quot;João Silva&quot;, &quot;email&quot;: &quot;joao.silva@example.com&quot;}'
+</code></pre>
+<h1 id="agora-e-com-voce-leia-o-tutorial-e-faca-a-aplicacao-modularizada-em-camadas">Agora é com você, leia o tutorial e faça a aplicação modularizada em camadas.</h1>
 
 
 
