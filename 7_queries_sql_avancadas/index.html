@@ -15,6 +15,8 @@
         <link rel="canonical" href="https://seusite.com/7_queries_sql_avancadas/">
       
       
+        <link rel="prev" href="../6_atividade_avaliativa_individual/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#queries-sqls-avancadas-em-banco-de-dados" class="md-skip">
+        <a href="#queries-sqls-avancadas-em-banco-de-dados-padrao-repository" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -380,6 +382,159 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Queries SQLs Avançadas em Banco de Dados
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Queries SQLs Avançadas em Banco de Dados
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modularizando-com-models-e-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modularizando com Models e Repositories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modularizando com Models e Repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nova-estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nova Estrutura do Projeto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passos-para-implementacao-de-models-e-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passos para Implementação de Models e Repositories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passos para Implementação de Models e Repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-definindo-o-model-em-modelsusermodelts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Definindo o Model em models/userModel.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-implementando-o-repositorio-em-repositoriesuserrepositoryts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Implementando o Repositório em repositories/userRepository.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-atualizando-o-controller-em-controllersusercontrollerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Atualizando o Controller em controllers/userController.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mantendo-as-rotas-em-routesuserroutests" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Mantendo as Rotas em routes/userRoutes.ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-servidor-e-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Servidor e Migrations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-testar-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Testar o Projeto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -395,7 +550,181 @@
                   
 
 
-<h1 id="queries-sqls-avancadas-em-banco-de-dados">Queries SQLs Avançadas em Banco de Dados</h1>
+<h1 id="queries-sqls-avancadas-em-banco-de-dados-padrao-repository">Queries SQLs Avançadas em Banco de Dados (Padrão Repository)</h1>
+<p>Vamos expandir o conteúdo da aula anterior, adicionando o uso de <strong>models</strong> e <strong>repositories</strong> para uma maior separação de responsabilidades, seguindo boas práticas de design.</p>
+<h2 id="modularizando-com-models-e-repositories"><strong>Modularizando com Models e Repositories</strong></h2>
+<p>Agora, vamos incluir o padrão <strong>repository</strong> para lidar com a lógica de acesso ao banco de dados, enquanto os <strong>models</strong> representarão os dados que manipulamos.</p>
+<h3 id="nova-estrutura-do-projeto"><strong>Nova Estrutura do Projeto</strong></h3>
+<ol>
+<li>
+<p>Vamos adicionar duas novas pastas:</p>
+<ul>
+<li><code>models</code>: para definir os esquemas de dados.</li>
+<li><code>repositories</code>: para manipulação dos dados no banco.</li>
+</ul>
+</li>
+<li>
+<p>A estrutura final do projeto ficará assim:</p>
+</li>
+</ol>
+<pre><code>src/
+│
+├── config/
+│   └── database.ts
+│
+├── controllers/
+│   └── userController.ts
+│
+├── models/
+│   └── userModel.ts
+│
+├── repositories/
+│   └── userRepository.ts
+│
+├── routes/
+│   └── userRoutes.ts
+│
+├── migrations/
+│   └── migrations.ts
+│
+├── server.ts
+</code></pre>
+<h3 id="passos-para-implementacao-de-models-e-repositories"><strong>Passos para Implementação de Models e Repositories</strong></h3>
+<h4 id="1-definindo-o-model-em-modelsusermodelts">1. <strong>Definindo o Model em <code>models/userModel.ts</code></strong></h4>
+<p>O <strong>model</strong> vai representar a estrutura dos nossos dados. Vamos criar um modelo simples para o usuário:</p>
+<pre><code class="language-typescript">export interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+</code></pre>
+<h4 id="2-implementando-o-repositorio-em-repositoriesuserrepositoryts">2. <strong>Implementando o Repositório em <code>repositories/userRepository.ts</code></strong></h4>
+<p>O <strong>repository</strong> vai concentrar a lógica de interação com o banco de dados, isolando a camada de acesso ao banco do restante da aplicação:</p>
+<pre><code class="language-typescript">import { Pool } from 'pg';
+import pool from '../config/database';
+import { User } from '../models/userModel';
+
+export class UserRepository {
+  private pool: Pool;
+
+  constructor() {
+    this.pool = pool;
+  }
+
+  // Método para buscar todos os usuários
+  async getAllUsers(): Promise&lt;User[]&gt; {
+    const { rows } = await this.pool.query('SELECT * FROM users');
+    return rows;
+  }
+
+  // Método para adicionar um novo usuário
+  async addUser(name: string, email: string): Promise&lt;User&gt; {
+    const queryText = 'INSERT INTO users(name, email) VALUES($1, $2) RETURNING *';
+    const { rows } = await this.pool.query(queryText, [name, email]);
+    return rows[0];
+  }
+}
+</code></pre>
+<h4 id="3-atualizando-o-controller-em-controllersusercontrollerts">3. <strong>Atualizando o Controller em <code>controllers/userController.ts</code></strong></h4>
+<p>Agora, o controller utilizará o <strong>UserRepository</strong> para manipular os dados:</p>
+<pre><code class="language-typescript">import { Request, Response } from 'express';
+import { UserRepository } from '../repositories/userRepository';
+
+const userRepository = new UserRepository();
+
+export const getUsers = async (req: Request, res: Response) =&gt; {
+  try {
+    const users = await userRepository.getAllUsers();
+    res.status(200).json(users);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao buscar usuários' });
+  }
+};
+
+export const addUser = async (req: Request, res: Response) =&gt; {
+  const { name, email } = req.body;
+  try {
+    const user = await userRepository.addUser(name, email);
+    res.status(201).json(user);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao adicionar usuário' });
+  }
+};
+</code></pre>
+<h4 id="4-mantendo-as-rotas-em-routesuserroutests">4. <strong>Mantendo as Rotas em <code>routes/userRoutes.ts</code></strong></h4>
+<p>As rotas permanecem simples, sem mudanças:</p>
+<pre><code class="language-typescript">import { Router } from 'express';
+import { getUsers, addUser } from '../controllers/userController';
+
+const router = Router();
+
+router.get('/users', getUsers);
+router.post('/users', addUser);
+
+export default router;
+</code></pre>
+<h4 id="5-servidor-e-migrations">5. <strong>Servidor e Migrations</strong></h4>
+<p>Nenhuma alteração no servidor ou nas migrações, mas aqui estão os arquivos para referência:</p>
+<ul>
+<li><strong>Servidor</strong>: <code>src/server.ts</code></li>
+</ul>
+<pre><code class="language-typescript">import express from 'express';
+import userRoutes from './routes/userRoutes';
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(express.json());
+
+// Utilizando as rotas de usuários
+app.use(userRoutes);
+
+app.listen(PORT, () =&gt; {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+</code></pre>
+<ul>
+<li><strong>Migrações</strong>: <code>migrations/migrations.ts</code></li>
+</ul>
+<pre><code class="language-typescript">import pool from '../config/database';
+
+const createUsersTable = async () =&gt; {
+  const client = await pool.connect();
+  try {
+    const queryText = `
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) UNIQUE NOT NULL
+      );
+    `;
+    await client.query(queryText);
+    console.log('Tabela &quot;users&quot; criada com sucesso!');
+  } catch (err) {
+    console.error('Erro ao criar tabela:', err);
+  } finally {
+    client.release();
+  }
+};
+
+createUsersTable().then(() =&gt; process.exit(0));
+</code></pre>
+<h4 id="6-testar-o-projeto">6. <strong>Testar o Projeto</strong></h4>
+<p>Para testar o projeto modularizado com <strong>models</strong> e <strong>repositories</strong>, utilize os mesmos comandos <code>curl</code> da aula anterior:</p>
+<ul>
+<li><strong>GET /users</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -X GET http://localhost:3000/users
+</code></pre>
+<ul>
+<li><strong>POST /users</strong>:</li>
+</ul>
+<pre><code class="language-bash">curl -X POST http://localhost:3000/users -H &quot;Content-Type: application/json&quot; -d '{&quot;name&quot;: &quot;Maria&quot;, &quot;email&quot;: &quot;maria@example.com&quot;}'
+</code></pre>
+<p>Com isso, seu projeto estará organizado em camadas, facilitando a manutenção, expansão e reutilização dos componentes!</p>
+<p>Agora é sua vez de implementar o padrão com <strong>models</strong> e <strong>repositories</strong> no seu projeto.</p>
 
 
 
