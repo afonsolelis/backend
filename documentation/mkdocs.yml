@@ -15,7 +15,7 @@ nav:
   - "Rotas e Controllers": 5_rotas_controllers.md
   - "Atividade Avaliativa Individual - Refatorando as Rotas e Controllers": 6_atividade_avaliativa_individual.md
   - "Queries SQLs Avançadas em Banco de Dados": 7_queries_sql_avancadas.md
-  # - "Helpers e Camadas Auxiliares do MVC": 8_helpers_camadas_auxiliares_mvc.md
+  - "Helpers e Camadas Auxiliares do MVC": 8_helpers_camadas_auxiliares_mvc.md
   # - "Avaliação Multidisciplinar": 9_avaliacao_multidisciplinar.md
   # - "Filas com RabbitMQ e Controle Assíncrono de Requisições": 10_filas_rabbitmq.md
   # - "TDD e Testes Unitários": 11_tdd_testes_unitarios.md
